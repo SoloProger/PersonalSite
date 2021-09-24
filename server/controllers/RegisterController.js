@@ -1,9 +1,19 @@
 import User from "../models/User";
 import bcrypt from "bcryptjs";
+import { validationResult } from "express-validator";
 
 export class RegisterController {
   async store(request, response) {
     try {
+      const errors = validationResult(request);
+
+      if (!errors.isEmpty()) {
+        return response.status(400).json({
+          errors: errors.array(),
+          message: "Неправильные данные при регистрации",
+        });
+      }
+
       const { email, password } = request.body;
 
       const person = await User.findOne({ email });
@@ -29,4 +39,4 @@ export class RegisterController {
   }
 }
 
-// TODO сделать валидацию данных 
+// TODO сделать валидацию данных
