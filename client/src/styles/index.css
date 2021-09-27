@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+/* 
+color: #61dafb;
+color: #1e88e5;
+color: #282c34;
+color: #dadbdc;
+color: #ffffff;
+*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: #282c34;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Header */
+
+.intro__wrapper {
+  width: 100%;
+  margin: 15px 0;
+  padding: 10px;
+  border: 4px solid #61dafb;
+  border-radius: 5px;
+  background-color: #dadbdc;
+  color: #000000;
+}
+
+.intro__text {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.intro__text__header {
+  font-family: "Montserrat", sans-serif;
+  line-height: 2;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro__text__paragraph {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.intro__img {
+  width: 100%;
+  text-align: center;
+}
+
+.intro__img img {
+  border-radius: 10px;
+}
+
+.intro__footer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .intro__img img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Contact */
+
+.contact__wrapper {
+  width: 100%;
+  margin: 30px 0;
+  padding: 20px;
+  border: 4px solid #61dafb;
+  border-radius: 5px;
+  background-color: #dadbdc;
+  color: #000000;
+}
+
+.contact__header{
+  font-size: 25px;
+}
+
+.contact__wrapper hr{
+  height: 1px;
+  border: 1px solid #c7cacc;
+  border-radius: 5px;
+}
+
+.contact__card{
+  width: 250px;
+  margin: 15px 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card__header{
+  display: flex;
+  align-items: center;
+}
+
+.card__header h3{
+  font-size: 30px;
+  padding: 0 5px;
+}
+
+.card__body{
+  width: 300px;
+  padding: 10px;
+}
+
+.card__footer{
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.button__link{
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 700px) {
+  .card__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+}

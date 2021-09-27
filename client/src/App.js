@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Contact from "./components/Contact";
+import Header from "./components/Header";
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="App">
+      <Header/>
+      <Contact/>
     </div>
-  )
+  );
 }
