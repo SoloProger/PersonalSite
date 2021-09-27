@@ -14,18 +14,21 @@ export default function Contact() {
           title="Телеграмм"
           body="Мой телеграмм. Можно писать в любое удобное время."
           button="Написать"
+          link="https://t.me/Andrei_1Solo"
         />
         <Card
           icon="https://img.icons8.com/color/48/000000/github.png"
           title="GitHub"
           body="Мой GitHub-аккаунт. Там вы найдете исходный код проекта."
           button="Написать"
+          link="https://github.com/SoloProger"
         />
         <Card
           icon="https://img.icons8.com/color/48/000000/linkedin.png"
           title="LinkedIn"
           body="Мой LinkedIn. Портфолио на иностранном языке."
           button="Посмотреть"
+          link="https://www.linkedin.com/in/andrei-solonnickov-767689210/"
         />
       </div>
     </div>

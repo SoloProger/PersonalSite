@@ -16,7 +16,7 @@ export default function Card(props) {
         </div>
         <div className="card__footer">
           <Button>
-            <a href="/" className="button__link">
+            <a href={props.link} className="button__link" target="_blank" rel="noreferrer">
               {props.button}
             </a>
           </Button>

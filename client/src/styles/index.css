@@ -35,53 +35,70 @@ body {
   max-width: 1200px;
 }
 
-/* Header */
+/* Content */
 
-.intro__wrapper {
+.content__wrapper {
+  display: flex;
   width: 100%;
   margin: 15px 0;
-  padding: 10px;
+  padding: 20px 15px;
   border: 4px solid #61dafb;
   border-radius: 5px;
   background-color: #dadbdc;
   color: #000000;
 }
 
-.intro__text {
+.content__text {
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
 }
 
-.intro__text__header {
+.content__text__header {
   font-family: "Montserrat", sans-serif;
   line-height: 2;
   font-size: 30px;
-  margin-bottom: 20px;
   text-align: center;
 }
 
-.intro__text__paragraph {
+.content__text__paragraph {
+  padding: 20px 60px;
+  margin: 5px;
   font-size: 18px;
-  margin-bottom: 20px;
 }
 
-.intro__img {
+.content__img {
   width: 100%;
   text-align: center;
 }
 
-.intro__img img {
+.content__img img {
   border-radius: 10px;
 }
 
-.intro__footer {
-  margin: 20px 0;
+.avatar{
+  max-width: 500px;
+}
+
+.content__footer {
   text-align: center;
 }
 
 @media (max-width: 700px) {
-  .intro__img img {
+  .content__wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content__text__paragraph{
+    padding: 10px;
+  }
+
+  .content__footer{
+    margin: 20px 0px;
+  }
+
+  .content__img img {
     width: 100%;
     max-width: 300px;
   }

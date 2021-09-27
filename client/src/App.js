@@ -1,12 +1,15 @@
 import React from "react";
-import Contact from "./components/Contact";
-import Header from "./components/Header";
+import { BrowserRouter} from "react-router-dom";
+import Navbar from "./components/UI/navbar/Navbar";
+import Routes from "./components/Routes";
 
 export default function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Contact/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Routes />
+      </div>
+    </BrowserRouter>
   );
 }
