@@ -1,17 +1,34 @@
-import React from "react";
-import {Route, Switch } from "react-router-dom";
-import AboutPage from "../pages/AboutPage";
-import StartPage from "../pages/StartPage";
+import React, { useContext } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { AuthContext } from "../context";
+import { privateRoutes, publicRoutes } from "../router";
 
 export default function Routes() {
-  return (
+  const { isAuth, setIsAuth } = useContext(AuthContext);
+
+  return isAuth ? (
     <Switch>
-      <Route path="/about">
-        <AboutPage />
-      </Route>
-      <Route path="/">
-        <StartPage />
-      </Route>
+      {privateRoutes.map((route) => (
+        <Route
+          component={route.component}
+          path={route.path}
+          exact={route.exact}
+          key={route.path}
+        />
+      ))}
+      <Redirect to="/about" />
+    </Switch>
+  ) : (
+    <Switch>
+      {publicRoutes.map((route) => (
+        <Route
+          component={route.component}
+          path={route.path}
+          exact={route.exact}
+          key={route.path}
+        />
+      ))}
+      <Redirect to="/" />
     </Switch>
   );
 }
