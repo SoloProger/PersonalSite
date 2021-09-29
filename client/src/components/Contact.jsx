@@ -20,7 +20,7 @@ export default function Contact() {
           icon="https://img.icons8.com/color/48/000000/github.png"
           title="GitHub"
           body="Мой GitHub-аккаунт. Там вы найдете исходный код проекта."
-          button="Написать"
+          button="Посмотреть"
           link="https://github.com/SoloProger"
         />
         <Card

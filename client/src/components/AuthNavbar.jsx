@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import AuthForm from "../../AuthForm";
-import Button from "../button/Button";
-import Modal from "../modal/Modal";
-import classes from "./Navbar.module.css";
+import AuthForm from "./AuthForm";
+import Button from "./UI/button/Button";
+import Modal from "./UI/modal/Modal";
+import classes from "./UI/navbar/Navbar.module.css";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [modal, setModal] = useState(false);
 
   return (
@@ -15,16 +15,6 @@ export default function Navbar(props) {
           Andrei Solo
         </Link>
         <ul className={classes.nav__list}>
-          <li className={classes.nav__item}>
-            <Link className={classes.nav__item__link} to="/about">
-              Обо_мне
-            </Link>
-          </li>
-          <li className={classes.nav__item}>
-            <a className={classes.nav__item__link} href="badges.html">
-              Портфолио
-            </a>
-          </li>
           <li className={classes.nav__item}>
             <Button
               // className={classes.nav__item__link}

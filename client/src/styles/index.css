@@ -76,7 +76,7 @@ body {
   border-radius: 10px;
 }
 
-.avatar{
+.avatar {
   max-width: 500px;
 }
 
@@ -85,16 +85,16 @@ body {
 }
 
 @media (max-width: 700px) {
-  .content__wrapper{
+  .content__wrapper {
     display: flex;
     flex-direction: column;
   }
 
-  .content__text__paragraph{
+  .content__text__paragraph {
     padding: 10px;
   }
 
-  .content__footer{
+  .content__footer {
     margin: 20px 0px;
   }
 
@@ -116,17 +116,17 @@ body {
   color: #000000;
 }
 
-.contact__header{
+.contact__header {
   font-size: 25px;
 }
 
-.contact__wrapper hr{
+.contact__wrapper hr {
   height: 1px;
   border: 1px solid #c7cacc;
   border-radius: 5px;
 }
 
-.contact__card{
+.contact__card {
   width: 250px;
   margin: 15px 10px;
   padding: 10px;
@@ -134,43 +134,48 @@ body {
   flex-direction: column;
 }
 
-.card__wrapper{
+.card__wrapper {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.card__header{
+.card__header {
   display: flex;
   align-items: center;
 }
 
-.card__header h3{
+.card__header h3 {
   font-size: 30px;
   padding: 0 5px;
 }
 
-.card__body{
+.card__body {
   width: 300px;
   padding: 10px;
 }
 
-.card__footer{
+.card__footer {
   padding-top: 20px;
   margin: 0 auto;
 }
 
-.button__link{
+.button__link {
   text-decoration: none;
   color: inherit;
 }
 
+.auth__block {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
 @media (max-width: 700px) {
-  .card__wrapper{
+  .card__wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  
 }
