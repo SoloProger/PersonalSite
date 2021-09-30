@@ -6,8 +6,4 @@ export const privateRoutes = [
   { path: "/", component: StartPage, exact: true },
   { path: "/about", component: AboutPage, exact: true },
 ];
-export const publicRoutes = [
-  { path: "/", component: StartPage, exact: true },
-  { path: "/login", component: LoginPage, exact: true },
-  
-];
+export const publicRoutes = [{ path: "/", component: StartPage, exact: true }];
