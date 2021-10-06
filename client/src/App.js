@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/UI/navbar/Navbar";
 import Routes from "./components/Routes";
 import { AuthContext } from "./context";
+import Form from "./components/Form";
 
 export default function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -24,6 +25,7 @@ export default function App() {
         <div className="App">
           <Navbar />
           <Routes />
+          <Form />
         </div>
       </BrowserRouter>
     </AuthContext.Provider>

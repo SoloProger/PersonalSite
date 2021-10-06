@@ -47,12 +47,12 @@
   transition: opacity 0.5s linear;
 }
 
-.nav__item__link:hover{
-    color: #1e88e5;
+.nav__item__link:hover {
+  color: #1e88e5;
 }
 
-.nav__item__link:hover::after{
-    opacity: 1;
+.nav__item__link:hover::after {
+  opacity: 1;
 }
 
 @media (max-width: 700px) {
@@ -64,3 +64,4 @@
     list-style-type: none;
   }
 }
+

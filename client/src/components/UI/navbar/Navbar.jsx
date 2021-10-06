@@ -19,28 +19,28 @@ export default function Navbar() {
   return (
     <nav>
       {isAuth ? (
-        <div className={classes.nav__wrapper}>
-          <Link to="/" className={classes.nav__logo}>
-            Andrei Solo
-          </Link>
-          <ul className={classes.nav__list}>
-            <li className={classes.nav__item}>
-              <Link className={classes.nav__item__link} to="/about">
-                Обо_мне
-              </Link>
-            </li>
-            <li className={classes.nav__item}>
-              <a className={classes.nav__item__link} href="badges.html">
-                Портфолио
-              </a>
-            </li>
-            <li className={classes.nav__item}>
-              <Button className={classes.nav__item__link} onClick={logout}>
-                Выйти
-              </Button>
-            </li>
-          </ul>
-        </div>
+          <div className={classes.nav__wrapper}>
+            <Link to="/" className={classes.nav__logo}>
+              Andrei Solo
+            </Link>
+            <ul className={classes.nav__list}>
+              <li className={classes.nav__item}>
+                <Link className={classes.nav__item__link} to="/about">
+                  Обо_мне
+                </Link>
+              </li>
+              <li className={classes.nav__item}>
+                <a className={classes.nav__item__link} href="badges.html">
+                  Портфолио
+                </a>
+              </li>
+              <li className={classes.nav__item}>
+                <Button className={classes.nav__item__link} onClick={logout}>
+                  Выйти
+                </Button>
+              </li>
+            </ul>
+          </div>
       ) : (
         <div className={classes.nav__wrapper}>
           <Link to="/" className={classes.nav__logo}>

@@ -1,5 +1,4 @@
 import AboutPage from "../pages/AboutPage.jsx";
-import LoginPage from "../pages/LoginPage";
 import StartPage from "../pages/StartPage.jsx";
 
 export const privateRoutes = [
