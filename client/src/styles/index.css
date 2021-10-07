@@ -218,7 +218,9 @@ body {
 }
 
 .image {
-  border-radius: 10px;
+  border-radius: 30px;
+  padding: 15px;
+  width: 650px;
 }
 
 .form__input {
@@ -240,6 +242,10 @@ body {
   .form__img {
     text-align: center;
   }
+
+  .image{
+    width: 400px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -252,6 +258,12 @@ body {
   .form__img {
     margin: 20px auto;
   }
+}
+
+@media (max-width: 420px) {
+ .image{
+   width: 250px;
+ } 
 }
 
 .error {

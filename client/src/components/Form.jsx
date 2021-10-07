@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "./UI/button/Button";
 import Input from "./UI/input/Input";
-import Author from "../images/author.jpg";
+import Logo from "../images/logo.png"
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -63,7 +63,7 @@ const Form = () => {
       <hr />
       <div className="form__inner">
         <div className="form__img">
-          <img src={Author} alt="" className="image" />
+          <img src={Logo} alt="" className="image" />
         </div>
         <div className="form__wrapper">
           <div className="form__header">
