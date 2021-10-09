@@ -5,3 +5,7 @@
 + React.js
 + Node.js(Express)
 + MongoDB(Облачная)
+
+## Глобальные изменения (09.10.21)
++ Vue.js ~~React.js~~
++ Backend также претерпит изменения в будущем
