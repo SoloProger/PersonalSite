@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/ToDoPage.css";
 import Button from "../components/UI/button/Button";
 import Modal from "../components/UI/modal/Modal";
@@ -14,7 +14,7 @@ const Todopage = () => {
     { title: "Hello3", body: "world3" },
   ];
 
-  const [todos, setTodos] = useState(arr);
+  const [todos, setTodos] = useState([]);
 
   const createTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
@@ -27,7 +27,7 @@ const Todopage = () => {
         <h2>Список задач</h2>
         <Button onClick={() => setModal(true)}>Добавить задачу</Button>
         <Modal visible={modal} setVisible={setModal}>
-          <Form create={createTodo}/>
+          <Form create={createTodo} />
         </Modal>
       </div>
       <hr />
