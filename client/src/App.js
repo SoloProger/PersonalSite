@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { AuthContext } from "./context";
 import Navbar from "./components/UI/navbar/Navbar";
 import Routes from "./components/Routes";
-import { AuthContext } from "./context";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [isAuth, setIsAuth] = useState(false);
@@ -26,6 +27,7 @@ export default function App() {
           <Navbar />
           <Routes />
           <Form />
+          <Footer/>
         </div>
       </BrowserRouter>
     </AuthContext.Provider>

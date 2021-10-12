@@ -48,6 +48,11 @@ body {
   color: #000000;
 }
 
+.content__wrapper:hover {
+  box-shadow: 0 5px 5px #1e88e5, 0 10px 10px #1e88e5;
+  transition: 0.5s linear;
+}
+
 .content__text {
   padding: 20px 10px;
   display: flex;
@@ -134,6 +139,11 @@ body {
   border-radius: 5px;
   background-color: #dadbdc;
   color: #000000;
+}
+
+.contact__wrapper:hover {
+  box-shadow: 0 5px 5px #1e88e5, 0 10px 10px #1e88e5;
+  transition: 0.5s linear;
 }
 
 .contact__header {
@@ -228,11 +238,26 @@ body {
   padding: 5px;
 }
 
-.form__header{
+.form__header {
   margin-bottom: 20px;
   border-top: 2px solid #61dafb;
   border-bottom: 2px solid #61dafb;
   padding: 5px;
+}
+
+.error {
+  color: rgb(145, 18, 18);
+  padding: 10px auto;
+  text-align: center;
+}
+
+.footer__wrapper {
+  margin: 50px;
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 20px;
 }
 
 @media (max-width: 700px) {
@@ -243,7 +268,7 @@ body {
     text-align: center;
   }
 
-  .image{
+  .image {
     width: 400px;
   }
 }
@@ -261,13 +286,7 @@ body {
 }
 
 @media (max-width: 420px) {
- .image{
-   width: 250px;
- } 
-}
-
-.error {
-  color: rgb(145, 18, 18);
-  padding: 10px auto;
-  text-align: center;
+  .image {
+    width: 250px;
+  }
 }
