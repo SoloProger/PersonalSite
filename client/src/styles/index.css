@@ -46,11 +46,12 @@ body {
   border-radius: 5px;
   background-color: #dadbdc;
   color: #000000;
+  transition: 2s;
 }
 
 .content__wrapper:hover {
   box-shadow: 0 5px 5px #1e88e5, 0 10px 10px #1e88e5;
-  transition: 0.5s linear;
+  
 }
 
 .content__text {
@@ -139,11 +140,12 @@ body {
   border-radius: 5px;
   background-color: #dadbdc;
   color: #000000;
+  transition: 2s;
 }
 
 .contact__wrapper:hover {
   box-shadow: 0 5px 5px #1e88e5, 0 10px 10px #1e88e5;
-  transition: 0.5s linear;
+  
 }
 
 .contact__header {
