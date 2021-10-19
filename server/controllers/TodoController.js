@@ -17,6 +17,24 @@ class ToDoController {
       res.status(500).json(error);
     }
   }
+
+  async update(req, res){
+    try {
+      const todo = await ToDoService.update(req.body);
+      return res.json(todo);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
+
+  async delete(req, res){
+    try {
+      const todo = await ToDoService.delete(req.params.id);
+      return res.json(todo);
+    } catch (error) {
+      res.status(500).json(error);
+    }
+  }
 }
 
 
