@@ -4,6 +4,7 @@ import Button from "../components/UI/button/Button";
 import Modal from "../components/UI/modal/Modal";
 import Form from "../components/ToDoPage/Form";
 import Todolist from "../components/ToDoPage/TodoList";
+import Updateform from "../components/ToDoPage/UpdateForm";
 import axios from "axios";
 
 const Todopage = () => {
@@ -19,17 +20,17 @@ const Todopage = () => {
 
   const sendTodo = async (newTodo) => {
     await axios
-      .post("http://localhost:5000/data", newTodo, {
+      .post("http://localhost:5000/todo/create", newTodo, {
         headers: {
           "Content-Type": "application/json",
         },
       })
-      .then(addToLocalStorage(newTodo));
+      .then(createTodo(newTodo));
     setModal(false);
   };
 
   const getTodo = async () => {
-    const data = await axios.get("http://localhost:5000/todos");
+    const data = await axios.get("http://localhost:5000/todo/all");
     const todosData = data.data;
     return setTodos([...todos, ...todosData]);
   };
@@ -43,14 +44,15 @@ const Todopage = () => {
     setModal(false);
   };
 
-  const addToLocalStorage = (newTodo) => {
-    const all = getToDoFromLocalStorage();
-    all.push(newTodo);
-    localStorage.setItem("todo", JSON.stringify(all));
+  const removeTodo = async (todo) => {
+    await axios
+      .delete("http://localhost:5000/todo/delete/" + todo._id)
+      .then(setTodos(todos.filter((td) => td._id !== todo._id)));
   };
 
-  const getToDoFromLocalStorage = () => {
-    return JSON.parse(localStorage.getItem("todo") || "[]");
+  const getUpdateTodo = (todo) => {
+    // await axios.put("http://localhost:5000/todo/update", todo);
+    
   };
 
   return (
@@ -61,10 +63,13 @@ const Todopage = () => {
         <Modal visible={modal} setVisible={setModal}>
           <Form create={sendTodo} />
         </Modal>
+        {/* <Modal visible={modal} setVisible={setModal}>
+          <Updateform update={updateTodo} />
+        </Modal> */}
       </div>
       <hr />
       <div>
-        <Todolist todos={todos} />
+        <Todolist todos={todos} remove={removeTodo} update={getUpdateTodo}/>
       </div>
     </div>
   );

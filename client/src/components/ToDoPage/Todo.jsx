@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../UI/button/Button";
 
 const Todo = (props) => {
-  
+
 
   return (
     <div className="todo__card">
@@ -16,7 +16,10 @@ const Todo = (props) => {
           </div>
         </div>
         <div>
-          <Button>Удалить</Button>
+          <Button onClick={() => props.remove(props.todo)}>Удалить</Button>
+        </div>
+        <div>
+          <Button onClick={() => props.update(props.todo)}>Обновить</Button>
         </div>
       </div>
     </div>
