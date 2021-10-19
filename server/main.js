@@ -1,24 +1,23 @@
-const express = require("express");
-const config = require("config");
-const mongoose = require("mongoose");
-
-const PORT = config.get("port") || 5000;
-const URI = config.get("mongoUri");
+import express from "express";
+import mongoose from "mongoose";
+import router from "./routes/router.js"
 
 const app = express();
+const PORT = 5000;
+const DB_URL = `mongodb+srv://admin:admin@cluster0.w9heg.mongodb.net/personSiteDB?retryWrites=true&w=majority`;
 
-// app.use('/api/auth', require('./routes/auth.routes'));
+app.use(express.json());
+app.use('/todo', router);
 
-async function start() {
+async function startServer() {
   try {
-    await mongoose.connect(URI);
+    await mongoose.connect(DB_URL);
     app.listen(PORT, () =>
-      console.log(`Приложение запущенно на ${PORT} порту`)
+      console.log(`App has started on http://localhost:${PORT}`)
     );
-  } catch (error) {
-    console.log(`Ошибка сервера ${error.message}`);
-    process.exit(1);
+  } catch (err) {
+    console.log(err);
   }
 }
 
-start();
+startServer();
