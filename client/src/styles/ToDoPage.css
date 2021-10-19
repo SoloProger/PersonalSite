@@ -1,0 +1,50 @@
+.todo__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.todo__header h2 {
+  font-size: 35px;
+}
+
+.todo__form {
+  width: 100%;
+  height: 100%;
+}
+
+.todo__form__header {
+  font-size: 25px;
+  text-align: center;
+  margin: 25px;
+}
+
+.todo__input__list {
+  margin: 15px;
+}
+
+.todo__card{
+  margin: 20px;
+}
+
+.todo__card__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.todo__card__info{
+  /* text-align: center; */
+  width: 70%;
+}
+
+.todo__card__title{
+  font-size: 25px;
+  margin: 5px;
+}
+
+.todo__card__body{
+  font-size: 20px;
+  margin: 10px;
+}
