@@ -159,7 +159,7 @@ body {
 }
 
 .contact__card {
-  width: 250px;
+  width: 100%;
   margin: 15px 10px;
   padding: 10px;
   display: flex;
@@ -292,3 +292,7 @@ body {
     width: 250px;
   }
 }
+
+
+/* News block */
+

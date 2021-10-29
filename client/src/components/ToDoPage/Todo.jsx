@@ -18,9 +18,6 @@ const Todo = (props) => {
         <div>
           <Button onClick={() => props.remove(props.todo)}>Удалить</Button>
         </div>
-        <div>
-          <Button onClick={() => props.update(props.todo)}>Обновить</Button>
-        </div>
       </div>
     </div>
   );

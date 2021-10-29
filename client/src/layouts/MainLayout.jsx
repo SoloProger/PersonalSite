@@ -5,6 +5,7 @@ import Navbar from "../components/UI/navbar/Navbar";
 import Routes from "../components/Routes";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
+import News from "../components/News";
 
 
 const Mainlayout = () => {
@@ -28,6 +29,7 @@ const Mainlayout = () => {
           <Navbar />
           <Routes />
           <Form />
+          <News/>
           <Footer />
         </div>
       </BrowserRouter>
