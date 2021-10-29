@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import router from "./routes/router.js";
 import cors from "cors";
+import postRouter from "./routes/postRouter.js";
 
 const app = express();
 const PORT = 5000;
@@ -11,6 +12,7 @@ const corsApp = cors();
 app.use(express.json());
 app.use(corsApp);
 app.use("/todo", router);
+app.use("/posts", postRouter);
 
 async function startServer() {
   try {
