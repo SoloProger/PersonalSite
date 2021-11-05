@@ -40,6 +40,11 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={classes.nav__item}>
+              <a href="/" className={classes.nav__item__link}>
+                Личный кабинет
+              </a>
+            </li>
+            <li className={classes.nav__item}>
               <Button className={classes.nav__item__link} onClick={logout}>
                 Выйти
               </Button>
