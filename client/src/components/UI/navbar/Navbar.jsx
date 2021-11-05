@@ -40,7 +40,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={classes.nav__item}>
-              <a href="/" className={classes.nav__item__link}>
+              <a href="http://127.0.0.1:8000/admin" className={classes.nav__item__link}>
                 Личный кабинет
               </a>
             </li>
