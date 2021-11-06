@@ -30,9 +30,9 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={classes.nav__item}>
-              <a className={classes.nav__item__link} href="badges.html">
+              <Link className={classes.nav__item__link} to="/portfolio">
                 Портфолио
-              </a>
+              </Link>
             </li>
             <li className={classes.nav__item}>
               <Link className={classes.nav__item__link} to="/todo">

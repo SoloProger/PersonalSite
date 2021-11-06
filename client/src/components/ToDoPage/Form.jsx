@@ -10,7 +10,6 @@ const Form = ({ create }) => {
 
     const newToDo = {
       ...todo,
-      id: Date.now(),
     };
     create(newToDo);
     setTodo({ title: "", body: "" });

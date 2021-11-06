@@ -13,7 +13,7 @@ const Todopage = () => {
 
   const sendTodo = async (newTodo) => {
     await axios
-      .post("http://localhost:5000/todo/create", newTodo, {
+      .post("http://127.0.0.1:8000/api/todo/", newTodo, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -23,7 +23,7 @@ const Todopage = () => {
   };
 
   const getTodo = async () => {
-    const data = await axios.get("http://localhost:5000/todo/all");
+    const data = await axios.get("http://127.0.0.1:8000/api/todo/");
     const todosData = data.data;
     return setTodos([...todos, ...todosData]);
   };
@@ -39,8 +39,8 @@ const Todopage = () => {
 
   const removeTodo = async (todo) => {
     await axios
-      .delete("http://localhost:5000/todo/delete/" + todo._id)
-      .then(setTodos(todos.filter((td) => td._id !== todo._id)));
+      .delete(`http://127.0.0.1:8000/api/todo/${todo.id}/`)
+      .then(setTodos(todos.filter((td) => td.id !== todo.id)));
   };
 
   return (
