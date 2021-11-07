@@ -1,22 +1,15 @@
-from rest_framework import generics
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from rest_framework import generics, permissions
 from ..models import Todo
 from .serializers import TodoSerializer
 
 
-class TodoListView(generics.ListAPIView):
+class TodoListView(generics.ListCreateAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
+    permission_classes = [permissions.AllowAny]
 
 
-class TodoDetailView(generics.RetrieveAPIView):
+class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-
-
-# class TodoCreateView(APIView):
-#     def post(self, request, pk, format=None):
-#         todo = generics.get_object_or_404(Todo, pk=pk)
-#         todo.add(request.todo)
-#         return Response()
+    permissions_class = permissions.AllowAny
