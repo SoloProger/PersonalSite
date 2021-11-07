@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Newslist from "./NewsList";
-import Button from "./UI/button/Button";
+import Loader from "./UI/loader/Loader.jsx";
 import axios from "axios";
 
 const News = () => {
@@ -10,12 +10,15 @@ const News = () => {
   //   { title: "Hello3", body: "world3", btn: "Подробнее" },
   // ];
 
-  const [news, setNews ] = useState([]);
+  const [news, setNews] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getTodo = async () => {
-    const data = await axios.get("http://localhost:5000/posts/all");
+    setLoading(true);
+    const data = await axios.get("http://127.0.0.1:8000/api/post/");
     const newsData = data.data;
-    return setNews([...news, ...newsData]);
+    setNews([...news, ...newsData]);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -28,7 +31,13 @@ const News = () => {
         <h2>Новости</h2>
       </div>
       <hr />
-      <Newslist news={news} />
+      {loading ? (
+        <div style={{ textAlign: "center", marginTop: "20px" }}>
+          <Loader />
+        </div>
+      ) : (
+        <Newslist news={news} />
+      )}
     </div>
   );
 };
