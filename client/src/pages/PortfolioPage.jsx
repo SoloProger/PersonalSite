@@ -4,6 +4,7 @@ import img from "../images/mysite.png";
 import brick from "../images/brickproject.png";
 import sitev3 from "../images/personsitev3.png";
 import sitev2 from "../images/personsitev2.png";
+import build from "../images/buildingsite.png";
 import mar from "../images/marriana.png";
 import obektuv from "../images/obektuv.png";
 import Project from "../components/PortfolioPage/Project";
@@ -41,6 +42,14 @@ const Portfoliopage = () => {
             Сайт был самым навороченным в плане технологий, т.к именно на нём впервые я писал серверную часть на отличном от JS языке.
             Это был PHP, конечно же не в чистом виде, а с фреймворком. Сайт был сделан с душой, но как зря. Много неправильных решений в гамме
             и верстке. Но он мне нравиться."
+          />
+          <Project
+            link="https://github.com/SoloProger/Vue-Shop-Frontend"
+            img={build}
+            title="Сайт строительной компании"
+            body="Сайт строительной компании представляющий из себя лендинг обернутый в SPA, не лучшая задумка, 
+            но решение принималось исходя из возмонжного расширения проекта в будущем.
+            На сайте имеется форма, бекенд которой написан на Python/Flask."
           />
           <Project
             link="http://react.host1831397.hostland.pro/"

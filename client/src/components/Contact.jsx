@@ -20,14 +20,14 @@ export default function Contact() {
           icon="https://img.icons8.com/color/48/000000/github.png"
           title="GitHub"
           body="Мой GitHub-аккаунт. Там вы найдете исходный код проекта."
-          button="Написать"
+          button="Посмотреть"
           link="https://github.com/SoloProger"
         />
         <Card
           icon="https://img.icons8.com/color/48/000000/linkedin.png"
           title="LinkedIn"
           body="Мой LinkedIn. Портфолио на иностранном языке."
-          button="Посмотреть"
+          button="Написать"
           link="https://www.linkedin.com/in/andrei-solonnickov-767689210/"
         />
       </div>
