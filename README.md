@@ -3,8 +3,10 @@
 
 ## Рабочий стэк
 + React.js
-+ Node.js(Express)
-+ MongoDB(Облачная)
++ ~~Node.js(Express)~~
++ ~~MongoDB(Облачная)~~
++ Python/Django
++ SQlite3
 
 ### Изменения проекта можно отследить по веткам
 ## Последние изменения
