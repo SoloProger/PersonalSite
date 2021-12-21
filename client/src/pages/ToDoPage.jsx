@@ -13,7 +13,7 @@ const Todopage = () => {
 
   const sendTodo = async (newTodo) => {
     await axios
-      .post("http://127.0.0.1:8000/api/todo/", newTodo, {
+      .post("http://127.0.0.1:8000/api/todos/", newTodo, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -23,7 +23,7 @@ const Todopage = () => {
   };
 
   const getTodo = async () => {
-    const data = await axios.get("http://127.0.0.1:8000/api/todo/");
+    const data = await axios.get("http://127.0.0.1:8000/api/todos/");
     const todosData = data.data;
     return setTodos([...todos, ...todosData]);
   };

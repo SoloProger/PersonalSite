@@ -6,6 +6,10 @@ import { privateRoutes, publicRoutes } from "../router";
 export default function Routes() {
   const { isAuth, setIsAuth } = useContext(AuthContext);
 
+  const redirect = () => {
+    window.location.href = "http://127.0.0.1:8000/admin";
+    return null;
+  };
   return isAuth ? (
     <Switch>
       {privateRoutes.map((route) => (
@@ -16,7 +20,8 @@ export default function Routes() {
           key={route.path}
         />
       ))}
-      <Redirect to="/about" />
+      <Route exact path="/admin" render={() => (true ? redirect() : null)} />
+      <Redirect to="/" />
     </Switch>
   ) : (
     <Switch>
