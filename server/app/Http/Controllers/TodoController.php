@@ -38,7 +38,7 @@ class TodoController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'description' => 'required',
+            'body' => 'required',
         ]);
         ToDo::create($request->all());
         $message = "Success";

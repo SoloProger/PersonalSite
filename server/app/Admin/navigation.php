@@ -23,6 +23,11 @@ use SleepingOwl\Admin\Navigation\Page;
 
 return [
     [
+        'title' => 'Вернуться на сайт',
+        'icon' => 'fas fa-sign-out-alt',
+        'url' => "http://localhost:3000"
+    ],
+    [
         'title' => 'Dashboard',
         'icon'  => 'fas fa-tachometer-alt',
         'url'   => route('admin.dashboard'),
@@ -33,6 +38,7 @@ return [
         'icon'  => 'fas fa-info-circle',
         'url'   => route('admin.information'),
     ],
+
 
     // Examples
     // [
@@ -65,9 +71,9 @@ return [
     //                'title'    => 'Blog',
     //                'priority' => 100,
     //                'model'    => \App\Blog::class
-	//		      ));
+    //		      ));
     //
-	//		      $page->addPage(\App\Blog::class);
+    //		      $page->addPage(\App\Blog::class);
     //	      }),
     //
     //        // or
