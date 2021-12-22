@@ -12,7 +12,8 @@ class AdminSectionsServiceProvider extends ServiceProvider
      */
     protected $sections = [
         \App\Models\User::class => 'App\Http\Admin\Users',
-        \App\Models\ToDo::class => 'App\Http\Admin\ToDo'
+        \App\Models\ToDo::class => 'App\Http\Admin\ToDo',
+        \App\Models\News::class => 'App\Http\Admin\News'
     ];
 
     /**

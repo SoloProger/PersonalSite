@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
@@ -15,6 +16,8 @@ use App\Http\Controllers\TodoController;
 |
 */
 
+
+Route::resource('news', NewsController::class);
 Route::resource('todos', TodoController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
