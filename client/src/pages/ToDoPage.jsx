@@ -39,7 +39,7 @@ const Todopage = () => {
 
   const removeTodo = async (todo) => {
     await axios
-      .delete(`http://127.0.0.1:8000/api/todo/${todo.id}/`)
+      .delete(`http://127.0.0.1:8000/api/todos/${todo.id}/`)
       .then(setTodos(todos.filter((td) => td.id !== todo.id)));
   };
 

@@ -12,13 +12,16 @@ export default function Project(props) {
           <h3>{props.title}</h3>
         </div>
         <div className="content__body project__body">
-          <p>
-            {props.body}
-          </p>
+          <p>{props.body}</p>
         </div>
         <div className="content__footer">
           <Button>
-            <a href={props.link} className="button__link">
+            <a
+              href={props.link}
+              className="button__link"
+              target="_blank"
+              rel="noreferrer"
+            >
               Ознакомиться
             </a>
           </Button>

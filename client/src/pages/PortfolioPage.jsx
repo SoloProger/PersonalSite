@@ -1,5 +1,8 @@
 import React from "react";
-import "../styles/PortfolioPage.css";
+// Компоненты
+import Project from "../components/PortfolioPage/Project";
+
+// Изображения
 import img from "../images/mysite.png";
 import brick from "../images/brickproject.png";
 import sitev3 from "../images/personsitev3.png";
@@ -7,7 +10,10 @@ import sitev2 from "../images/personsitev2.png";
 import build from "../images/buildingsite.png";
 import mar from "../images/marriana.png";
 import obektuv from "../images/obektuv.png";
-import Project from "../components/PortfolioPage/Project";
+import mamba from "../images/mamba.png";
+
+//Стили
+import "../styles/PortfolioPage.css";
 
 const Portfoliopage = () => {
   return (
@@ -59,18 +65,22 @@ const Portfoliopage = () => {
             поэтому получилось лучше чем мои проекты. Проект получился большим и сложном, он до сих пор развивается."
           />
           <Project
-            link="http://mar.host1817853.hostland.pro/"
+            link="http://marianna-cafe.ru/"
             img={mar}
             title="Марианна"
-            body="Этот и следующий проект - верстка + Wordpress. Они позволят оценить мои навыки верстки. 
-            Оценить мои навыки серверного программирования по этим проктам, увы, невозможно"
+            body="Этот и следующий проект - верстка + PHP. Интернет-магазин. Очень интересный проект, где пришлось много поработать с PHP"
           />
           <Project
             link="https://obektuv.ru/"
             img={obektuv}
             title="Объектув"
-            body="Этот проект - верстка + Wordpress. Они позволят оценить мои навыки верстки. 
-            Оценить мои навыки серверного программирования по этим проктам, увы, невозможно"
+            body="Этот проект - верстка + PHP. Сайт по предоставлению услуг фотостудии"
+          />
+          <Project
+            link="https://mambaroll.ru/"
+            img={mamba}
+            title="Черная мамба"
+            body="Верстка + PHP. Сайт по предоставлению услуг по продажи суши"
           />
         </div>
       </section>

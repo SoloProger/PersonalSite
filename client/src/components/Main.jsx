@@ -47,6 +47,8 @@ export default function Main() {
               <a
                 className="button__link"
                 href="https://skillbox.ru/media/growth/kto_takoy_t_shaped_spetsialist/"
+                target="_blank"
+                rel="noreferrer"
               >
                 Кто такой T-Shaped Специалист ?
               </a>
@@ -61,7 +63,7 @@ export default function Main() {
           </div>
           <div className="content__body">
             <p style={{ marginBottom: "20px" }}>
-              Чтобы узнать о сфере подробно, нажмити на кнопку. Я же в этом
+              (Чтобы узнать о сфере подробно, нажмити на кнопку) Я же в этом
               блоке опишу, почему именно backend. Изначально я вообще хотел быть
               fullstack-разработчиком, но из-за сложности освоения сразу двух
               направлений разработки я отказался от этой идеи. Неудачный выбор
@@ -75,6 +77,8 @@ export default function Main() {
               <a
                 className="button__link"
                 href="https://checkroi.ru/blog/professiya-bekend-razrabotchik/"
+                target="_blank"
+                rel="noreferrer"
               >
                 Кто такой Backend Разработчик ?
               </a>
@@ -91,17 +95,20 @@ export default function Main() {
             <p style={{ marginBottom: "20px" }}>
               Это ответление блока о Backend-разработке, в котором я рассказываю
               свой опыт во Frontend. После отказа от fullstack, я углубился во
-              frontend, но и здесь так и не смогу найти себя. Было интересно
+              frontend, но и здесь так и не смог найти себя. Было интересно
               делать запросы, работать со store, делать маршрутизацию и
               разбираться во фреймворках, но в моей работе было много вёрстки,
-              которую я не люблю. Да и в принципе frontend больше подходит для
+              которая кажется мне скучной. Да и в принципе frontend больше подходит для
               творческих людей, коим я не являюсь. Было принято решение уйти в
-              Backend. Тут то я и нашел себя.
+              Backend. Тут то я и нашел себя. (Чтобы узнать о сфере подробно,
+              нажмити на кнопку)
             </p>
             <Button>
               <a
                 className="button__link"
                 href="https://checkroi.ru/blog/frontend-razrabotchik-podrobnyj-razbor-professii/"
+                target="_blank"
+                rel="noreferrer"
               >
                 Кто такой Frontend Разработчик ?
               </a>
