@@ -18,7 +18,7 @@ export default function AboutSite() {
         <strong>Frontend: </strong>
         <span>React.js</span> <br />
         <strong>Backend: </strong>
-        <span>Python/Django + MySQL</span>
+        <span>PHP/Laravel + MySQL</span>
       </div>
     </div>
   );

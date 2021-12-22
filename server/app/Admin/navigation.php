@@ -25,7 +25,7 @@ return [
     [
         'title' => 'Вернуться на сайт',
         'icon' => 'fas fa-sign-out-alt',
-        'url' => "http://localhost:3000"
+        'url' => "http://sololink.site"
     ],
     [
         'title' => 'Dashboard',

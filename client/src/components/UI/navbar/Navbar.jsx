@@ -39,11 +39,11 @@ export default function Navbar() {
                 TODO
               </Link>
             </li>
-            {/* <li className={classes.nav__item}>
-              <a href="http://127.0.0.1:8000/admin" className={classes.nav__item__link} target="_blank" rel="noreferrer">
+            <li className={classes.nav__item}>
+              <a href="http://77.223.97.201/admin" className={classes.nav__item__link} target="_blank" rel="noreferrer">
                 Личный кабинет
               </a>
-            </li> */}
+            </li>
             <li className={classes.nav__item}>
               <Button className={classes.nav__item__link} onClick={logout}>
                 Выйти
