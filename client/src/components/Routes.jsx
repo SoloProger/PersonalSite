@@ -7,7 +7,7 @@ export default function Routes() {
   const { isAuth, setIsAuth } = useContext(AuthContext);
 
   const redirect = () => {
-    window.location.href = "http://127.0.0.1:8000/admin";
+    window.location.href = "http://77.223.97.201/admin";
     return null;
   };
   return isAuth ? (
