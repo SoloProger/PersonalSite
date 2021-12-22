@@ -13,7 +13,7 @@ const Todopage = () => {
 
   const sendTodo = async (newTodo) => {
     await axios
-      .post("http://127.0.0.1:8000/api/todos/", newTodo, {
+      .post("http://77.223.97.201/api/todos/", newTodo, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -23,7 +23,7 @@ const Todopage = () => {
   };
 
   const getTodo = async () => {
-    const data = await axios.get("http://127.0.0.1:8000/api/todos/");
+    const data = await axios.get("http://77.223.97.201/api/todos/");
     const todosData = data.data;
     return setTodos([...todos, ...todosData]);
   };
@@ -39,7 +39,7 @@ const Todopage = () => {
 
   const removeTodo = async (todo) => {
     await axios
-      .delete(`http://127.0.0.1:8000/api/todos/${todo.id}/`)
+      .delete(`http://77.223.97.201/api/todos/${todo.id}/`)
       .then(setTodos(todos.filter((td) => td.id !== todo.id)));
   };
 
