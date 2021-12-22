@@ -9,7 +9,7 @@ const Newscard = (props) => {
         <h3>{props.card.title}</h3>
       </div>
       <div className="card__body">{props.card.body}</div>
-      <div className="card__footer">{props.card.created}</div>
+      <div className="card__footer">{props.card.created_at}</div>
     </div>
   );
 };

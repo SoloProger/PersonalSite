@@ -15,7 +15,7 @@ const News = () => {
 
   const getTodo = async () => {
     setLoading(true);
-    const data = await axios.get("http://127.0.0.1:8000/api/post/");
+    const data = await axios.get("http://127.0.0.1:8000/api/news/");
     const newsData = data.data;
     setNews([...news, ...newsData]);
     setLoading(false);

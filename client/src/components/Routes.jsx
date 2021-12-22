@@ -33,7 +33,7 @@ export default function Routes() {
           key={route.path}
         />
       ))}
-      <Redirect to="/" />
+      {/* <Redirect to="/" /> */}
     </Switch>
   );
 }

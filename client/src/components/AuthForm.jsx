@@ -16,7 +16,7 @@ export default function AuthForm() {
     <div>
       <form onSubmit={login}>
         <Input type="text" placeholder="Введите почту" />
-        <Input type="text" placeholder="Введите пароль" />
+        <Input type="password" placeholder="Введите пароль" />
         <div className="content__footer">
           <Button>Авторизоваться</Button>
         </div>
