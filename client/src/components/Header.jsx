@@ -1,14 +1,9 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../context";
-
 import Author from "../images/author.jpg";
 import Button from "./UI/button/Button";
-import Modal from "./UI/modal/Modal";
 
 export default function Header() {
-  const { isAuth, setIsAuth } = useContext(AuthContext);
-  const [modal, setModal] = useState(false);
 
   return (
     <header>
@@ -30,20 +25,11 @@ export default function Header() {
             этому занятию...
           </p>
           <div className="content__footer">
-            {isAuth ? (
-              <Button>
-                <Link to="/about" className="button__link">
-                  Подробнее...
-                </Link>
-              </Button>
-            ) : (
-              <div>
-                <Button onClick={() => setModal(true)}>Подробнее...</Button>
-                <Modal visible={modal} setVisible={setModal}>
-                  Вы не авторизованы!
-                </Modal>
-              </div>
-            )}
+            <Button>
+              <Link to="/about" className="button__link">
+                Подробнее...
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

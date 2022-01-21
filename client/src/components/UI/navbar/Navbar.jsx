@@ -40,7 +40,12 @@ export default function Navbar() {
               </Link>
             </li>
             <li className={classes.nav__item}>
-              <a href="http://77.223.97.201/admin" className={classes.nav__item__link} target="_blank" rel="noreferrer">
+              <a
+                href="http://localhost:3006"
+                className={classes.nav__item__link}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Личный кабинет
               </a>
             </li>
@@ -57,6 +62,16 @@ export default function Navbar() {
             Andrei Solo
           </Link>
           <ul className={classes.nav__list}>
+            <li className={classes.nav__item}>
+              <Link className={classes.nav__item__link} to="/about">
+                Обо_мне
+              </Link>
+            </li>
+            <li className={classes.nav__item}>
+              <Link className={classes.nav__item__link} to="/portfolio">
+                Портфолио
+              </Link>
+            </li>
             <li className={classes.nav__item}>
               <Button
                 onClick={() => setModal(true)}

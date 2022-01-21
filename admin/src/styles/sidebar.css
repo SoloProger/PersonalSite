@@ -1,0 +1,32 @@
+.sidebar {
+  position: fixed;
+  background-color: #282c34;
+  height: 100%;
+  width: 22%;
+  overflow: auto;
+  border-right: 1px solid #fff;
+}
+
+.sidebar-list {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 25% auto;
+}
+
+.sidebar-list-item {
+  display: flex;
+  list-style-type: none;
+  font-size: 20px;
+  margin-bottom: 70px;
+  transition: 1s;
+}
+
+.sidebar-list-item::before {
+  content: "";
+  border: 1px solid #fff;
+  margin: 0 20px;
+}
+
+.link {
+  margin-right: 10px;
+}
