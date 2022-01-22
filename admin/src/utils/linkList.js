@@ -1,6 +1,6 @@
 export const sidebarList = [
   {
-    name: "Создать/удалить новость",
+    name: "Создать новость",
     to: "/news/create",
   },
   {

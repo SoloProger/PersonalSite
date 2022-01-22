@@ -1,0 +1,12 @@
+.app_table {
+  width: 100%;
+}
+
+.headers_item {
+  text-align: start;
+}
+
+.delete_btn {
+  background-color: transparent;
+  border: none;
+}

@@ -12,9 +12,9 @@ const Navbar = () => {
       <div className="navbar-list">
         <ul>
           <li className="navbar-list-item">
-            <Link className="link" to="http://localhost:3000">
+            <a className="link" href="http://localhost:3000" rel="noreferrer">
               Вернуться на сайт
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

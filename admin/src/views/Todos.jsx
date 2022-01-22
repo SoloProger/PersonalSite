@@ -1,9 +1,10 @@
 import React from 'react'
+import Table from '../components/Todos/Table/Table'
 
 const Todos = () => {
     return (
-        <div>
-            Hello
+        <div className='container'>
+            <Table/>
         </div>
     )
 }

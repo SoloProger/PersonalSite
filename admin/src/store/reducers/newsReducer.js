@@ -39,7 +39,7 @@ export const newsReducer = (state = defaultState, action) => {
         news: state.news.filter((item) => item.id !== action.payload),
       };
     case ALL_NEWS:
-      return { ...state, news: [...state.news, action.payload] };
+      return { ...state, news: [...state.news, ...action.payload] };
     default:
       return state;
   }

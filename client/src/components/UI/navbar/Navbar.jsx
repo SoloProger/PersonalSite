@@ -43,7 +43,6 @@ export default function Navbar() {
               <a
                 href="http://localhost:3006"
                 className={classes.nav__item__link}
-                target="_blank"
                 rel="noreferrer"
               >
                 Личный кабинет
