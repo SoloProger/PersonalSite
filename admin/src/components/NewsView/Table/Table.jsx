@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchNews } from "../../../store/api/news";
-import {
-  allNewsAction,
-  removeNewsAction,
-} from "../../../store/actions/newsActions";
+import { fetchNews, removeNews } from "../../../store/api/news";
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import classes from "./Table.module.css";
+import { removeNewsAction } from "../../../store/actions/newsActions";
 
 const Table = () => {
   const dispatch = useDispatch();
@@ -16,18 +13,21 @@ const Table = () => {
   const news = useSelector((state) => state.news.news);
 
   const getNews = () => {
-    // dispatch(fetchNews());
+    dispatch(fetchNews());
   };
 
-  const removeNews = (item) => {
-    dispatch(removeNewsAction(item.id));
+  const deleteOneNews = (item) => {
+    dispatch(removeNews(item));
   };
 
-  // useEffect(() => {
-  //   getNews();
-  // }, []);
+  useEffect(() => {
+    getNews();
+  }, []);
 
-  // console.log(news);
+  const formatDate = (date) => {
+    const formatedDate = new Date();
+    return formatedDate.toUTCString(date);
+  };
 
   return (
     <table className={classes.app_table}>
@@ -43,14 +43,14 @@ const Table = () => {
 
       <tbody>
         {news.map((item) => (
-          <tr key={item.id}>
+          <tr key={item._id}>
             <td>{item.title}</td>
             <td>{item.body}</td>
-            <td>{item.updated_at}</td>
+            <td>{formatDate(item.publish)}</td>
             <td>
               <button
                 className={classes.delete_btn}
-                onClick={() => removeNews(item)}
+                onClick={() => deleteOneNews(item)}
               >
                 <MdDelete size="2em" color="red" />
               </button>
