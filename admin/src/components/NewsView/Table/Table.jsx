@@ -5,24 +5,18 @@ import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import classes from "./Table.module.css";
-import { removeNewsAction } from "../../../store/actions/newsActions";
 
 const Table = () => {
   const dispatch = useDispatch();
 
-  const news = useSelector((state) => state.news.news);
-
-  const getNews = () => {
+  useEffect(() => {
     dispatch(fetchNews());
-  };
+  }, []);
 
+  const news = useSelector((state) => state.news.news);
   const deleteOneNews = (item) => {
     dispatch(removeNews(item));
   };
-
-  useEffect(() => {
-    getNews();
-  }, []);
 
   const formatDate = (date) => {
     const formatedDate = new Date();

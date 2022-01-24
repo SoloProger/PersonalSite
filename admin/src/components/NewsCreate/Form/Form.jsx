@@ -4,6 +4,7 @@ import AppInput from "../../UI/input/AppInput";
 import AppButton from "../../UI/button/AppButton";
 import classes from "./Form.module.css";
 import { addNewsAction } from "../../../store/actions/newsActions";
+import { addNews } from "../../../store/api/news";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -11,22 +12,22 @@ const Form = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-  const addNews = (event) => {
+  const submit = (event) => {
     event.preventDefault();
     const newNews = {
-      id: Date.now,
       title: title,
       body: body,
-      updated_at: "12.12.21",
     };
 
-    dispatch(addNewsAction(newNews));
+    dispatch(addNews(newNews));
+    setTitle("");
+    setBody("");
   };
 
   return (
     <div>
       <h2>Создать новость</h2>
-      <form onSubmit={addNews}>
+      <form onSubmit={submit}>
         <AppInput
           placeholder="Введите название:"
           value={title}

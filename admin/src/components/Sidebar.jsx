@@ -18,6 +18,9 @@ const Sidebar = () => {
           </li>
         ))}
       </ul>
+      <div className="admin-version">
+          <strong>0.6.0</strong>
+      </div>
     </aside>
   );
 };

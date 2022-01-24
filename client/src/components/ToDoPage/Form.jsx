@@ -3,7 +3,7 @@ import Input from "../UI/input/Input";
 import Button from "../UI/button/Button";
 
 const Form = ({ create }) => {
-  const [todo, setTodo] = useState({ title: "", body: "" });
+  const [todo, setTodo] = useState({ title: "", body: "", completed: true });
 
   const addNewTodo = (event) => {
     event.preventDefault();

@@ -12,7 +12,7 @@ export default function Header() {
           <figure>
             <img src={Author} alt="Author" />
             <figcaption>
-              <em>Солонников Андрей. Автор сайта. Начинающий разработчик</em>
+              <em>Солонников Андрей. Автор сайта. JavaScript разработчик</em>
             </figcaption>
           </figure>
         </div>

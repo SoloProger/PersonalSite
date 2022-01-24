@@ -4,18 +4,13 @@ import Loader from "./UI/loader/Loader.jsx";
 import axios from "axios";
 
 const News = () => {
-  // const arr = [
-  //   { title: "Hello", body: "world", btn: "Подробнее" },
-  //   { title: "Hello2", body: "world2", btn: "Подробнее" },
-  //   { title: "Hello3", body: "world3", btn: "Подробнее" },
-  // ];
 
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
 
   const getTodo = async () => {
     setLoading(true);
-    const data = await axios.get("http://77.223.97.201/api/news/");
+    const data = await axios.get("http://localhost:5000/news/all");
     const newsData = data.data;
     setNews([...news, ...newsData]);
     setLoading(false);

@@ -11,6 +11,7 @@
   color: #fff;
   text-transform: uppercase;
   margin: 25% auto;
+  margin-bottom: 40%;
 }
 
 .sidebar-list-item {
@@ -29,4 +30,8 @@
 
 .link {
   margin-right: 10px;
+}
+
+.admin-version{
+  text-align: center;
 }

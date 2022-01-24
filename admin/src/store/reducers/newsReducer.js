@@ -11,7 +11,7 @@ export const newsReducer = (state = defaultState, action) => {
     case REMOVE_NEWS:
       return {
         ...state,
-        news: state.news.filter((item) => item.id !== action.payload),
+        news: state.news.filter((item) => item._id !== action.payload),
       };
     case ALL_NEWS:
       return { ...state, news: [...state.news, ...action.payload] };

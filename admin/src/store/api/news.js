@@ -1,5 +1,18 @@
-import { allNewsAction, removeNewsAction } from "../actions/newsActions";
+import {
+  addNewsAction,
+  allNewsAction,
+  removeNewsAction,
+} from "../actions/newsActions";
 import axios from "axios";
+
+export const addNews = (newNews) => {
+  return function (dispatch) {
+    axios
+      .post("http://localhost:5000/news/create", newNews)
+      .then((response) => response.data)
+      .then((data) => dispatch(addNewsAction(data)));
+  };
+};
 
 export const fetchNews = () => {
   return function (dispatch) {

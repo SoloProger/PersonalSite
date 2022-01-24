@@ -1,29 +1,7 @@
 import { ALL_TODO } from "../types/todoTypes";
 
 const initialState = {
-  todos: [
-    {
-      id: 1,
-      title: "Hello",
-      body: "world",
-      updated_at: "12.12.21",
-      completed: false,
-    },
-    {
-      id: 1,
-      title: "Hello",
-      body: "world",
-      updated_at: "12.12.21",
-      completed: true,
-    },
-    {
-      id: 1,
-      title: "Hello",
-      body: "world",
-      updated_at: "12.12.21",
-      completed: true,
-    },
-  ],
+  todos: [],
 };
 
 export const todoReducer = (state = initialState, action) => {
