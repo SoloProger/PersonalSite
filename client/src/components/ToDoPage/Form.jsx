@@ -3,7 +3,10 @@ import Input from "../UI/input/Input";
 import Button from "../UI/button/Button";
 
 const Form = ({ create }) => {
-  const [todo, setTodo] = useState({ title: "", body: "", completed: true });
+  const [todo, setTodo] = useState({
+    title: "",
+    description: "",
+  });
 
   const addNewTodo = (event) => {
     event.preventDefault();
@@ -12,7 +15,7 @@ const Form = ({ create }) => {
       ...todo,
     };
     create(newToDo);
-    setTodo({ title: "", body: "" });
+    setTodo({ title: "", description: "" });
   };
 
   return (
@@ -36,9 +39,9 @@ const Form = ({ create }) => {
             <Input
               type="text"
               placeholder="Введите Описанание"
-              value={todo.body}
+              value={todo.description}
               onChange={(event) => {
-                setTodo({ ...todo, body: event.target.value });
+                setTodo({ ...todo, description: event.target.value });
               }}
             />
           </div>

@@ -13,7 +13,7 @@ const Todopage = () => {
 
   const sendTodo = async (newTodo) => {
     await axios
-      .post("http://localhost:5000/todo/add", newTodo, {
+      .post("http://localhost:8000/todo/create", newTodo, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -23,7 +23,7 @@ const Todopage = () => {
   };
 
   const getTodo = async () => {
-    const data = await axios.get("http://localhost:5000/todo/all");
+    const data = await axios.get("http://localhost:8000/todos");
     const todosData = data.data;
     return setTodos([...todos, ...todosData]);
   };

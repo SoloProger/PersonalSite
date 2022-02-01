@@ -1,0 +1,19 @@
+{
+  "name": "andreisolo/server",
+  "autoload": {
+    "psr-4": {
+      "Andreisolo\\Server\\": "src/",
+      "Router\\": "src/routes",
+      "Config\\": "src/config",
+      "Models\\": "src/models",
+      "Controllers\\": "src/controllers"
+    }
+  },
+  "authors": [
+    {
+      "name": "SoloProger",
+      "email": "solo.proger@gmail.com"
+    }
+  ],
+  "require": {}
+}

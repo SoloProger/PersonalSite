@@ -12,7 +12,7 @@ const Todo = (props) => {
             <h4>{props.todo.title}</h4>
           </div>
           <div className="todo__card__body">
-            <p>{props.todo.body}</p>
+            <p>{props.todo.description}</p>
           </div>
         </div>
         <div>
