@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Modal from "./UI/modal/Modal";
-import AboutSite from "./AboutSite";
+import Modal from "../UI/modal/Modal";
+import AboutSite from "../AboutSite";
 
 const Footer = () => {
   const [modal, setModal] = useState(false);

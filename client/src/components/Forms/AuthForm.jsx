@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import Input from "./UI/input/Input";
-import Button from "./UI/button/Button";
-import { AuthContext } from "../context";
+import Input from "../UI/input/Input";
+import Button from "../UI/button/Button";
+import { AuthContext } from "../../context";
 
 export default function AuthForm() {
   const { isAuth, setIsAuth } = useContext(AuthContext);

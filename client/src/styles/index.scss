@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
+@import "header.scss";
 @import "content.scss";
 @import "contact.scss";
+@import "latestpost.scss";
+@import "news.scss";
 @import "form.scss";
 
 /* 
@@ -11,6 +14,7 @@ color: #1e88e5;
 color: #21243D;
 color: #dadbdc;
 color: #ffffff;
+color: #00A8CC;
 */
 
 $color: #fff;
@@ -39,6 +43,16 @@ body {
 .App {
   width: 100%;
   /* max-width: 1200px; */
+}
+
+.button-link {
+  text-decoration: none;
+  color: #ff6464;
+  transition: all 0.3s linear;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .error {
@@ -105,4 +119,3 @@ body {
     width: 250px;
   }
 }
-
