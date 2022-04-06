@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context";
 import Button from "../button/Button";
 import Modal from "../modal/Modal";
-import AuthForm from "../../AuthForm";
-import classes from "./Navbar.module.css";
+import AuthForm from "../../Forms/AuthForm";
+import classes from "./Navbar.module.scss";
+
+import { privateLinks, publicLinks } from "../../../utils/linkList";
 
 export default function Navbar() {
   const [modal, setModal] = useState(false);
@@ -21,30 +23,14 @@ export default function Navbar() {
       {isAuth ? (
         <div className={classes.nav__wrapper}>
           <div className={classes.nav__logo}></div>
-          {/* <Link to="/" className={classes.nav__logo}>
-            Andrei Solo
-          </Link> */}
           <ul className={classes.nav__list}>
-            <li className={classes.nav__item}>
-              <Link className={classes.nav__item__link} to="/">
-                Главная
-              </Link>
-            </li>
-            <li className={classes.nav__item}>
-              <Link className={classes.nav__item__link} to="/about">
-                Обо_мне
-              </Link>
-            </li>
-            <li className={classes.nav__item}>
-              <Link className={classes.nav__item__link} to="/portfolio">
-                Портфолио
-              </Link>
-            </li>
-            <li className={classes.nav__item}>
-              <Link className={classes.nav__item__link} to="/todo">
-                TODO
-              </Link>
-            </li>
+            {privateLinks.map((link) => (
+              <li className={classes.nav__item} key={link.uniq}>
+                <Link className={classes.nav__item__link} to={link.path}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
             <li className={classes.nav__item}>
               <a
                 href="http://localhost:3006"
@@ -64,23 +50,14 @@ export default function Navbar() {
       ) : (
         <div className={classes.nav__wrapper}>
           <div className={classes.nav__logo}></div>
-          {/* <Link to="/" className={classes.nav__logo}>
-            Andrei Solo
-          </Link> */}
           <ul className={classes.nav__list}>
-            <Link className={classes.nav__item__link} to="/">
-              Главная
-            </Link>
-            <li className={classes.nav__item}>
-              <Link className={classes.nav__item__link} to="/about">
-                Обо_мне
-              </Link>
-            </li>
-            <li className={classes.nav__item}>
-              <Link className={classes.nav__item__link} to="/portfolio">
-                Портфолио
-              </Link>
-            </li>
+            {publicLinks.map((link) => (
+              <li className={classes.nav__item} key={link.uniq}>
+                <Link className={classes.nav__item__link} to={link.path}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
             <li className={classes.nav__item}>
               <Button
                 onClick={() => setModal(true)}

@@ -1,9 +1,9 @@
 import React from "react";
-import Newscard from "./NewsCard";
+import Newscard from "../Cards/NewsCard";
 
 const Newslist = ({ news }) => {
   return (
-    <div className="card__wrapper">
+    <div className="news-list">
       {news.map((item) => (
         <Newscard card={item} />
       ))}

@@ -1,17 +1,17 @@
 import React from "react";
-import Form from "../components/Form";
-import Footer from "../components/Footer";
-import News from "../components/News";
-import Contact from "../components/Contact";
-import Header from "../components/Header";
+import Header from "../components/Blocs/Header";
+import News from "../components/Blocs/News";
+import Contacts from "../components/Blocs/Contacts";
+import Footer from "../components/Blocs/Footer";
+import LatestPost from "../components/Blocs/LatestPost";
 
 const MainPage = () => {
   return (
     <div>
       <Header />
-      <Form />
+      <LatestPost/>
       <News />
-      <Contact />
+      <Contacts />
       <Footer />
     </div>
   );

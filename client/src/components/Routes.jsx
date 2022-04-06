@@ -4,7 +4,7 @@ import { AuthContext } from "../context";
 import { privateRoutes, publicRoutes } from "../router";
 
 export default function Routes() {
-  const { isAuth, setIsAuth } = useContext(AuthContext);
+  const { isAuth,  } = useContext(AuthContext);
 
   return isAuth ? (
     <div>

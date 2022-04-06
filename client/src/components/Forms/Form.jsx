@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Button from "./UI/button/Button";
-import Input from "./UI/input/Input";
-import Logo from "../images/logo.png"
+import Button from "../UI/button/Button";
+import Input from "../UI/input/Input";
+import Logo from "../../images/logo.png"
 
 const Form = () => {
   const [name, setName] = useState("");

@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../Cards/Card";
 
-export default function Contact() {
+export default function Contacts() {
   return (
     <div className="contact__wrapper">
       <div className="contact__header">
