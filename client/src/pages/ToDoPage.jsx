@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/ToDoPage.css";
 import Button from "../components/UI/button/Button";
 import Modal from "../components/UI/modal/Modal";
-import Form from "../components/ToDoPage/Form";
+import Form from "../components/Form";
 import Todolist from "../components/ToDoPage/TodoList";
 import axios from "axios";
 
@@ -15,8 +15,8 @@ const Todopage = () => {
     await axios
       .post("http://localhost:5000/todo/add", newTodo, {
         headers: {
-          "Content-Type": "application/json",
-        },
+          "Content-Type": "application/json"
+        }
       })
       .then(createTodo(newTodo));
     setModal(false);
@@ -44,19 +44,22 @@ const Todopage = () => {
   };
 
   return (
-    <div className="contact__wrapper">
-      <div className="todo__header">
-        <h2>Список задач</h2>
-        <Button onClick={() => setModal(true)}>Добавить задачу</Button>
-        <Modal visible={modal} setVisible={setModal}>
-          <Form create={sendTodo} />
-        </Modal>
+    <section>
+      <div className="contact__wrapper">
+        <div className="todo__header">
+          <h2>Список задач</h2>
+          <Button onClick={() => setModal(true)}>Добавить задачу</Button>
+          <Modal visible={modal} setVisible={setModal}>
+            <Form create={sendTodo} />
+          </Modal>
+        </div>
+        <hr />
+        <div>
+          <Todolist todos={todos} remove={removeTodo} />
+        </div>
       </div>
-      <hr />
-      <div>
-        <Todolist todos={todos} remove={removeTodo} />
-      </div>
-    </div>
+      <Form/>
+    </section>
   );
 };
 
