@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+@import "content.scss";
+@import "contact.scss";
+@import "form.scss";
+
+/* 
+color: #61dafb;
+color: #1e88e5;
+color: #21243D;
+color: #dadbdc;
+color: #ffffff;
+*/
+
+$color: #fff;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #21243d;
+  background-color: $color;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.App {
+  width: 100%;
+  /* max-width: 1200px; */
+}
+
+.error {
+  color: rgb(145, 18, 18);
+  padding: 10px auto;
+  text-align: center;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  /* margin: 50px; */
+  text-align: center;
+}
+
+.footer__text {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.about__site {
+  cursor: pointer;
+}
+
+.modal__about {
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__about__body {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 700px) {
+  .image {
+    width: 80%;
+  }
+  .form__img {
+    text-align: center;
+  }
+
+  .image {
+    width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form__img {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .image {
+    width: 250px;
+  }
+}
+

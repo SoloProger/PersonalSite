@@ -20,10 +20,16 @@ export default function Navbar() {
     <nav>
       {isAuth ? (
         <div className={classes.nav__wrapper}>
-          <Link to="/" className={classes.nav__logo}>
+          <div className={classes.nav__logo}></div>
+          {/* <Link to="/" className={classes.nav__logo}>
             Andrei Solo
-          </Link>
+          </Link> */}
           <ul className={classes.nav__list}>
+            <li className={classes.nav__item}>
+              <Link className={classes.nav__item__link} to="/">
+                Главная
+              </Link>
+            </li>
             <li className={classes.nav__item}>
               <Link className={classes.nav__item__link} to="/about">
                 Обо_мне
@@ -57,10 +63,14 @@ export default function Navbar() {
         </div>
       ) : (
         <div className={classes.nav__wrapper}>
-          <Link to="/" className={classes.nav__logo}>
+          <div className={classes.nav__logo}></div>
+          {/* <Link to="/" className={classes.nav__logo}>
             Andrei Solo
-          </Link>
+          </Link> */}
           <ul className={classes.nav__list}>
+            <Link className={classes.nav__item__link} to="/">
+              Главная
+            </Link>
             <li className={classes.nav__item}>
               <Link className={classes.nav__item__link} to="/about">
                 Обо_мне

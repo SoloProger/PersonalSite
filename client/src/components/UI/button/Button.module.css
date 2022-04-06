@@ -1,9 +1,9 @@
 .button{
     padding: 5px 15px;
-    color: #1e88e5;
+    color: #FF6464;
     font-size: 20px;
     background: transparent;
-    border: 1px solid #1e88e5;
+    border: 1px solid #FF6464;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s linear;
@@ -16,7 +16,7 @@
     width: 100%;
     height: 3px;
 
-    background: #1e88e5;
+    background: #FF6464;
     opacity: 0;
 
     display: none;
@@ -28,7 +28,7 @@
 
 .button:hover{
     color: #ffffff;
-    background: #1e88e5;
+    background: #FF6464;
 }
 
 .button:hover::after{

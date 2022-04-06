@@ -1,20 +1,20 @@
 import React from "react";
-import Navbar from "../components/UI/navbar/Navbar";
-import Routes from "../components/Routes";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
 import News from "../components/News";
+import Contact from "../components/Contact";
+import Header from "../components/Header";
 
-const MainLayout = () => {
+const MainPage = () => {
   return (
-    <div className="App">
-      <Navbar />
-      <Routes />
+    <div>
+      <Header />
       <Form />
       <News />
+      <Contact />
       <Footer />
     </div>
   );
 };
 
-export default MainLayout;
+export default MainPage;
