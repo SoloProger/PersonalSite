@@ -4,6 +4,8 @@ import Loader from "../UI/loader/Loader.jsx";
 import axios from "axios";
 
 const News = () => {
+  const [flag, setFlag] = useState(true);
+
   const newsData = [
     {
       title: "hello",
@@ -43,6 +45,7 @@ const News = () => {
 
   return (
     <div className="news-wrapper">
+      {flag ? <sup>Soon</sup> : ""}
       <div>
         <h2>Новости</h2>
       </div>

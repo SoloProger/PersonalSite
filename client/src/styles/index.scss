@@ -7,6 +7,8 @@
 @import "latestpost.scss";
 @import "news.scss";
 @import "form.scss";
+@import "footer.scss";
+@import "about-card.scss";
 
 /* 
 color: #61dafb;
@@ -35,6 +37,13 @@ body {
   background-color: $color;
 }
 
+sup {
+  background-color: chartreuse;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+}
+
 #root {
   display: flex;
   justify-content: center;
@@ -59,22 +68,6 @@ body {
   color: rgb(145, 18, 18);
   padding: 10px auto;
   text-align: center;
-}
-
-.footer__wrapper {
-  display: flex;
-  flex-direction: column;
-  /* margin: 50px; */
-  text-align: center;
-}
-
-.footer__text {
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.about__site {
-  cursor: pointer;
 }
 
 .modal__about {

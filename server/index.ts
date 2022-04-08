@@ -5,6 +5,7 @@ import swaggerUi from "swagger-ui-express";
 import router from "./routes";
 import cors from "cors";
 
+
 const PORT = Number(process.env.PORT);
 
 const app: Application = express();
@@ -24,6 +25,7 @@ app.use(
     })
 );
 
+
 async function start() {
     try {
         await sequelize.authenticate();
@@ -35,8 +37,6 @@ async function start() {
         console.log(error);
     }
 }
-
-
 start();
 
 

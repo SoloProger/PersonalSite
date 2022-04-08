@@ -1,7 +1,5 @@
 import TodoService from "./TodoService";
 
-
-
 export default class TodoController {
     public async message(req: any, res: any) {
         const service = new TodoService()
