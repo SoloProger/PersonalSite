@@ -32,15 +32,6 @@ export default function Navbar() {
               </li>
             ))}
             <li className={classes.nav__item}>
-              <a
-                href="http://localhost:3006"
-                className={classes.nav__item__link}
-                rel="noreferrer"
-              >
-                Личный кабинет
-              </a>
-            </li>
-            <li className={classes.nav__item}>
               <Button className={classes.nav__item__link} onClick={logout}>
                 Выйти
               </Button>
