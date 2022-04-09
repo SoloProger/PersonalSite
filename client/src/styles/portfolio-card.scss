@@ -1,0 +1,25 @@
+.portfolio-card-wrapper {
+  //   display: flex;
+  width: 100%;
+  margin: 15px 0;
+  padding: 20px 15px;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000000;
+  transition: 2s;
+
+  &:hover {
+    box-shadow: 0 5px 5px #ff6464, 0 10px 10px #ff6464;
+  }
+
+  img {
+    max-width: 500px;
+  }
+}
+
+.portfolio-card-content {
+  p {
+    margin-bottom: 20px;
+  }
+}
