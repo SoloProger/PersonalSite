@@ -1,14 +1,25 @@
 import React from "react";
-import Newscard from "../Cards/NewsCard";
+import NewsCard from "../Cards/NewsCard";
+import PropTypes from "prop-types";
 
-const Newslist = ({ news }) => {
+const NewsList = ({ news }) => {
   return (
     <div className="news-list">
-      {news.map((item) => (
-        <Newscard card={item} />
+      {news.map((oneNews) => (
+        <NewsCard
+          key={oneNews.key}
+          title={oneNews.title}
+          body={oneNews.body}
+          tag={oneNews.tag}
+          date={oneNews.date}
+        />
       ))}
     </div>
   );
 };
 
-export default Newslist;
+NewsList.propTypes = {
+  news: PropTypes.array
+};
+
+export default NewsList;

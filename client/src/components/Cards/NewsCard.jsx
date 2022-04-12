@@ -1,7 +1,8 @@
 import React from "react";
 import newsImg from "../../images/newsImg.png";
+import PropTypes from "prop-types";
 
-const Newscard = (props) => {
+const NewsCard = ({ title, date, tag, body }) => {
   const formatDate = (date) => {
     const formatedDate = new Date();
     return formatedDate.toUTCString(date);
@@ -11,17 +12,22 @@ const Newscard = (props) => {
     <div className="news-card">
       <img src={newsImg} alt="" />
       <div className="card-content">
-        <h3>{props.card.title}</h3>
+        <h3>{title}</h3>
         <div className="card-navbar">
-          <h4 className="date">{props.card.date}</h4>
-          <h4 className="tag">{props.card.tag}</h4>
+          <h4 className="date">{date}</h4>
+          <h4 className="tag">{tag}</h4>
         </div>
-        <p>
-          {props.card.body}
-        </p>
+        <p>{body}</p>
       </div>
     </div>
   );
 };
 
-export default Newscard;
+NewsCard.propTypes = {
+  title: PropTypes.string,
+  date: PropTypes.string,
+  tag: PropTypes.string,
+  body: PropTypes.string
+};
+
+export default NewsCard;
