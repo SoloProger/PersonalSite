@@ -11,6 +11,7 @@ const defaultState = {
       date: "12.22.2334",
       tag: "habr"
     },
+    
     {
       key: generate(),
       title: "hello",
