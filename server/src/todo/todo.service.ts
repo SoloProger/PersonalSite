@@ -13,19 +13,23 @@ export class TodoService {
     return todo;
   }
 
-  findAll() {
-    return `This action returns all todo`;
+  async findAll(): Promise<Todo[]> {
+    const todos = await this.todoRepository.findAll({ include: { all: true } });
+    return todos;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} todo`;
+  async findOne(id: number): Promise<Todo> {
+    const todo = await this.todoRepository.findOne({ where: { id }, include: { all: true } });
+    return todo;
   }
 
   update(id: number, updateTodoDto: UpdateTodoDto) {
     return `This action updates a #${id} todo`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} todo`;
+  async remove(id: number): Promise<any> {
+    const todo = await this.todoRepository.findOne({ where: { id }, include: { all: true } });
+    await todo.destroy();
+    return todo;
   }
 }

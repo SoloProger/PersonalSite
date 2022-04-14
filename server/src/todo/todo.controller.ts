@@ -25,11 +25,15 @@ export class TodoController {
     return this.todoService.create(createTodoDto);
   }
 
-  @Get()
+  @ApiOperation({summary: 'Получение todos'})
+  @ApiResponse({status: 200, type: [Todo]})
+  @Get('all')
   findAll() {
     return this.todoService.findAll();
   }
 
+  @ApiOperation({summary: 'Получение todo'})
+  @ApiResponse({status: 200, type: Todo})
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.todoService.findOne(+id);
@@ -40,6 +44,8 @@ export class TodoController {
     return this.todoService.update(+id, updateTodoDto);
   }
 
+  @ApiOperation({summary: 'Удаление todo'})
+  @ApiResponse({status: 200, type: Todo})
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.todoService.remove(+id);
