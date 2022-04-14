@@ -1,10 +1,9 @@
 import React from "react";
 //Стили
-import "../styles/PortfolioPage.css";
 import { portfolioList } from "../utils/portfolioList";
 import PortfolioCard from "../components/Cards/PortfolioCard";
 
-const Portfoliopage = () => {
+const PortfolioPage = () => {
   return (
     <section className="portfolio">
       {portfolioList.map((project) => (
@@ -21,4 +20,4 @@ const Portfoliopage = () => {
   );
 };
 
-export default Portfoliopage;
+export default PortfolioPage;

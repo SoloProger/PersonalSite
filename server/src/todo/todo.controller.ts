@@ -14,13 +14,13 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Todo } from './entities/todo.entity';
 
 @ApiTags('Todos')
-@Controller('todo')
+@Controller('api/todo')
 export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 
   @ApiOperation({ summary: 'Создание todo' })
   @ApiResponse({ status: 200, type: Todo })
-  @Post()
+  @Post('create')
   create(@Body() createTodoDto: CreateTodoDto) {
     return this.todoService.create(createTodoDto);
   }
