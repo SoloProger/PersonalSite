@@ -5,6 +5,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const PORT = process.env.PORT;
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
 
   const config = new DocumentBuilder()
     .setTitle('Документация API для персонального сайта')
