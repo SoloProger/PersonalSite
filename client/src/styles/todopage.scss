@@ -1,0 +1,24 @@
+.todo-wrapper {
+  width: 100%;
+  margin: 30px 0;
+  padding: 20px;
+  border: 4px solid #edf7fa;
+  border-radius: 5px;
+  background-color: #edf7fa;
+  color: #000000;
+  transition: 2s;
+
+  &:hover {
+    box-shadow: 0 5px 5px #61dafb, 0 10px 10px #61dafb;
+  }
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+
+  h2 {
+    font-size: 35px;
+  }
+}
