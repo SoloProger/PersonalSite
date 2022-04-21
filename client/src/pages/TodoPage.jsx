@@ -1,48 +1,49 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodoAction, allTodoAction, removeTodoAction } from "../store/actions/todoAction";
 import Button from "../components/UI/button/Button";
 import Modal from "../components/UI/modal/Modal";
 import Form from "../components/Forms/Form";
 import TodoList from "../components/Lists/TodoList";
 import TodoForm from "../components/Forms/TodoForm";
-import axios from "axios";
 
 const TodoPage = () => {
   const [modal, setModal] = useState(false);
 
-  const [todos, setTodos] = useState([
-    { id: 1, title: "hello", description: "hello" }
-  ]);
+  const todos = useSelector((state) => state.todo.todos);
+  const dispatch = useDispatch();
 
-  const sendTodo = async (newTodo) => {
-    await axios
-      .post("http://localhost:5000/api/todo/create", newTodo, {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(createTodo(newTodo));
-    setModal(false);
-  };
+  // const sendTodo = async (newTodo) => {
+  //   await axios
+  //     .post("http://localhost:5000/api/todo/create", newTodo, {
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       }
+  //     })
+  //     .then(createTodo(newTodo));
+  //   setModal(false);
+  // };
 
-  const getTodo = async () => {
-    const data = await axios.get("http://localhost:5000/todo/all");
-    const todosData = data.data;
-    return setTodos([...todos, ...todosData]);
-  };
+  // const getTodo = async () => {
+  //   const data = await axios.get("http://localhost:5000/todo/all");
+  //   const todosData = data.data;
+  //   return setTodos([...todos, ...todosData]);
+  // };
 
   useEffect(() => {
-    getTodo();
-  }, []);
+    dispatch(allTodoAction(todos))
+  }, [])
 
   const createTodo = (newTodo) => {
-    setTodos([...todos, newTodo]);
+    dispatch(addTodoAction(newTodo));
     setModal(false);
   };
 
-  const removeTodo = async (todo) => {
-    await axios
-      .delete(`http://localhost:5000/todo/${todo.id}/`)
-      .then(setTodos(todos.filter((td) => td._id !== todo._id)));
+  const removeTodo = (todo) => {
+    // await axios
+    //   .delete(`http://localhost:5000/todo/${todo.id}/`)
+    //   .then(setTodos(todos.filter((td) => td._id !== todo._id)));
+    dispatch(removeTodoAction(todo))
   };
 
   return (
@@ -52,12 +53,12 @@ const TodoPage = () => {
           <h2>Список задач</h2>
           <Button onClick={() => setModal(true)}>Добавить задачу</Button>
           <Modal visible={modal} setVisible={setModal}>
-            <TodoForm create={sendTodo} />
+            <TodoForm create={createTodo} />
           </Modal>
         </div>
         <hr />
         <div>
-          <TodoList todos={todos} remove={removeTodo} />
+          <TodoList todos={todos} remove={removeTodo}/>
         </div>
       </div>
       <Form />

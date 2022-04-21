@@ -7,23 +7,23 @@ import axios from "axios";
 const News = () => {
   const [flag, setFlag] = useState(true);
 
-  const newsData = useSelector((state) => state.news);
+  const news = useSelector((state) => state.news.news);
 
-  const [news, setNews] = useState([]);
+  // const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const getTodo = async () => {
-    setLoading(true);
-    const data = newsData;
-    // const data = await axios.get("http://localhost:5000/news/all");
-    // const newsData = data.data;
-    setNews([...news, ...data]);
-    setLoading(false);
-  };
+  // const getTodo = async () => {
+  //   setLoading(true);
+  //   const data = newsData;
+  //   // const data = await axios.get("http://localhost:5000/news/all");
+  //   // const newsData = data.data;
+  //   setNews([...news, ...data]);
+  //   setLoading(false);
+  // };
 
-  useEffect(() => {
-    getTodo();
-  }, []);
+  // useEffect(() => {
+  //   getTodo();
+  // }, []);
 
   return (
     <div className="news-wrapper">
