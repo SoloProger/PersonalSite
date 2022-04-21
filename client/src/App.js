@@ -20,7 +20,7 @@ export default function App() {
       }}
     >
       <BrowserRouter>
-        <div className="App">
+        <div className="app">
           <Navbar />
           <Routes />
         </div>

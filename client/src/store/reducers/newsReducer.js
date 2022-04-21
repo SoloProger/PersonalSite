@@ -11,7 +11,7 @@ const defaultState = {
       date: "12.22.2334",
       tag: "habr"
     },
-    
+
     {
       key: generate(),
       title: "hello",
@@ -34,7 +34,7 @@ const defaultState = {
 export const newsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_NEWS:
-      return { ...state, news: [...state.name, action.payload] };
+      return { ...state, news: [...state.news, action.payload] };
     case REMOVE_NEWS:
       return {
         ...state,

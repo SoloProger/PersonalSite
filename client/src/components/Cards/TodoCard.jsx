@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Button from "../UI/button/Button";
 
-const TodoCard = ({ todo, title, description, remove }) => {
+const TodoCard = ({ todo, title, description, remove, completed }) => {
   return (
     <div className="todo-card-info">
       <h4>{title}</h4>
       <p>{description}</p>
-      <span>Completed</span>
+      <span>{completed ? "Выполнено" : "Не выполнено"}</span>
       <Button onClick={() => remove(todo)}>Удалить</Button>
     </div>
   );

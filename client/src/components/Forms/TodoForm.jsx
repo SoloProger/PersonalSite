@@ -1,18 +1,24 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import Input from "../UI/input/Input";
 import Button from "../UI/button/Button";
+import generate from "../../utils/generator";
 
 const TodoForm = ({ create }) => {
-  const [todo, setTodo] = useState({ title: "", description: "" });
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
   const addNewTodo = (event) => {
     event.preventDefault();
-
-    const newToDo = {
-      ...todo
+    const todo = {
+      id: generate(),
+      title: title,
+      description: description,
+      completed: false
     };
-    create(newToDo);
-    setTodo({ title: "", description: "" });
+    create(todo);
+    setTitle("");
+    setDescription("");
   };
 
   return (
@@ -23,20 +29,16 @@ const TodoForm = ({ create }) => {
           <Input
             type="text"
             placeholder="Введите название"
-            value={todo.title}
-            onChange={(event) => {
-              setTodo({ ...todo, title: event.target.value });
-            }}
+            value={title}
+            onChange={(event) => setTitle(event.target.value)}
           />
         </div>
         <div>
           <Input
             type="text"
             placeholder="Введите Описанание"
-            value={todo.description}
-            onChange={(event) => {
-              setTodo({ ...todo, description: event.target.value });
-            }}
+            value={description}
+            onChange={(event) => setDescription(event.target.value)}
           />
         </div>
       </div>
@@ -45,6 +47,10 @@ const TodoForm = ({ create }) => {
       </div>
     </form>
   );
+};
+
+TodoForm.propTypes = {
+  create: PropTypes.func
 };
 
 export default TodoForm;
