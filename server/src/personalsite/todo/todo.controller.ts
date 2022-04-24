@@ -14,9 +14,9 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Todo } from './entities/todo.entity';
 
 @ApiTags('Todos')
-@Controller('api/todo')
+@Controller('ps/api/todo')
 export class TodoController {
-  constructor(private readonly todoService: TodoService) {}
+  constructor(private readonly todoService: TodoService) { }
 
   @ApiOperation({ summary: 'Создание todo' })
   @ApiResponse({ status: 200, type: Todo })
@@ -25,15 +25,15 @@ export class TodoController {
     return this.todoService.create(createTodoDto);
   }
 
-  @ApiOperation({summary: 'Получение todos'})
-  @ApiResponse({status: 200, type: [Todo]})
+  @ApiOperation({ summary: 'Получение todos' })
+  @ApiResponse({ status: 200, type: [Todo] })
   @Get('all')
   findAll() {
     return this.todoService.findAll();
   }
 
-  @ApiOperation({summary: 'Получение todo'})
-  @ApiResponse({status: 200, type: Todo})
+  @ApiOperation({ summary: 'Получение todo' })
+  @ApiResponse({ status: 200, type: Todo })
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.todoService.findOne(+id);
@@ -44,8 +44,8 @@ export class TodoController {
     return this.todoService.update(+id, updateTodoDto);
   }
 
-  @ApiOperation({summary: 'Удаление todo'})
-  @ApiResponse({status: 200, type: Todo})
+  @ApiOperation({ summary: 'Удаление todo' })
+  @ApiResponse({ status: 200, type: Todo })
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.todoService.remove(+id);

@@ -4,8 +4,6 @@ import { newsReducer } from "./reducers/newsReducer";
 import { todoReducer } from "./reducers/todoReducer";
 import thunk from "redux-thunk";
 
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.css';
 
 const rootReducer = combineReducers({
   news: newsReducer,

@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodoAction, allTodoAction, removeTodoAction } from "../store/actions/todoAction";
+import {
+  addTodoAction,
+  allTodoAction,
+  removeTodoAction
+} from "../store/actions/todoAction";
 import Button from "../components/UI/button/Button";
 import Modal from "../components/UI/modal/Modal";
 import Form from "../components/Forms/Form";
 import TodoList from "../components/Lists/TodoList";
 import TodoForm from "../components/Forms/TodoForm";
+import TodoCard from "../components/Cards/TodoCard";
+import { fetchTodos } from "../store/api/todo";
 
 const TodoPage = () => {
   const [modal, setModal] = useState(false);
 
-  const todos = useSelector((state) => state.todo.todos);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, []);
+
+  const todos = useSelector(state => state.todo.todo);
 
   // const sendTodo = async (newTodo) => {
   //   await axios
@@ -30,21 +41,21 @@ const TodoPage = () => {
   //   return setTodos([...todos, ...todosData]);
   // };
 
-  useEffect(() => {
-    dispatch(allTodoAction(todos))
-  }, [])
+  // useEffect(() => {
+  //   dispatch(allTodoAction(todos))
+  // }, [])
 
-  const createTodo = (newTodo) => {
-    dispatch(addTodoAction(newTodo));
-    setModal(false);
-  };
+  // const createTodo = (newTodo) => {
+  //   dispatch(addTodoAction(newTodo));
+  //   setModal(false);
+  // };
 
-  const removeTodo = (todo) => {
-    // await axios
-    //   .delete(`http://localhost:5000/todo/${todo.id}/`)
-    //   .then(setTodos(todos.filter((td) => td._id !== todo._id)));
-    dispatch(removeTodoAction(todo))
-  };
+  // const removeTodo = (todo) => {
+  // await axios
+  //   .delete(`http://localhost:5000/todo/${todo.id}/`)
+  //   .then(setTodos(todos.filter((td) => td._id !== todo._id)));
+  // dispatch(removeTodoAction(todo))
+  // };
 
   return (
     <section>
@@ -53,12 +64,31 @@ const TodoPage = () => {
           <h2>Список задач</h2>
           <Button onClick={() => setModal(true)}>Добавить задачу</Button>
           <Modal visible={modal} setVisible={setModal}>
-            <TodoForm create={createTodo} />
+            {/* <TodoForm create={createTodo} /> */}
           </Modal>
         </div>
         <hr />
         <div>
-          <TodoList todos={todos} remove={removeTodo}/>
+          {/* remove={removeTodo} */}
+          <div className="todo-card">
+            <div className="todo-card-title">
+              <h2>Заголовок</h2>
+              <h2>Описание</h2>
+              <h2>Статус</h2>
+              <h2>Действие</h2>
+            </div>
+            {todos.map((todo) => (
+              <TodoCard
+                todo={todo}
+                title={todo.title}
+                description={todo.description}
+                completed={todo.completed}
+                key={todo.id}
+                // remove={remove}
+              />
+            ))}
+          </div>
+          {/* <TodoList todos={todos}  /> */}
         </div>
       </div>
       <Form />
