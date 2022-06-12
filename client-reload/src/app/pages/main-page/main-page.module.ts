@@ -4,12 +4,16 @@ import {MainPageComponent} from './main-page.component';
 import {AboutPersonComponent} from './components/about-person/about-person.component';
 import {RouterModule} from "@angular/router";
 import {ButtonModule} from "primeng/button";
+import { LatestPostComponent } from './components/latest-post/latest-post.component';
+import { NewsComponent } from './components/news/news.component';
 
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    AboutPersonComponent
+    AboutPersonComponent,
+    LatestPostComponent,
+    NewsComponent
   ],
   imports: [
     CommonModule,
