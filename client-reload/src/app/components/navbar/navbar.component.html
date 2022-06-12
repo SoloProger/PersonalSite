@@ -1,0 +1,12 @@
+<ul class="nav-list">
+  <li class="nav-item" *ngFor="let link of links">
+    <a routerLink="{{link.pathName}}" class="nav-item-link">
+      {{link.linkName}}
+    </a>
+  </li>
+  <li>
+    <button pButton pRipple type="button" icon="pi pi-sign-out"
+            class="p-button-rounded p-button-danger p-button-text"></button>
+  </li>
+</ul>
+
