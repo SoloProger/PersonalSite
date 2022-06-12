@@ -20,10 +20,8 @@ export default function App() {
       }}
     >
       <BrowserRouter>
-        <div className="app">
-          <Navbar />
-          <Routes />
-        </div>
+        <Navbar />
+        <Routes />
       </BrowserRouter>
     </AuthContext.Provider>
   );

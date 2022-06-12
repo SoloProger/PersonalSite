@@ -7,7 +7,7 @@ export default function Routes() {
   const { isAuth,  } = useContext(AuthContext);
 
   return isAuth ? (
-    <div>
+    <main>
       <Switch>
         {privateRoutes.map((route) => (
           <Route
@@ -18,9 +18,9 @@ export default function Routes() {
           />
         ))}
       </Switch>
-    </div>
+    </main>
   ) : (
-    <div>
+    <main>
       <Switch>
         {publicRoutes.map((route) => (
           <Route
@@ -33,6 +33,6 @@ export default function Routes() {
 
         <Redirect to="/" />
       </Switch>
-    </div>
+    </main>
   );
 }

@@ -26,7 +26,7 @@ const News = () => {
   // }, []);
 
   return (
-    <div className="news-wrapper">
+    <section className="news-wrapper">
       {flag ? <sup>Soon</sup> : ""}
       <div>
         <h2>Новости</h2>
@@ -39,7 +39,7 @@ const News = () => {
       ) : (
         <NewsList news={news} />
       )}
-    </div>
+    </section>
   );
 };
 
