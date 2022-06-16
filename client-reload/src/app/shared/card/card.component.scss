@@ -1,0 +1,31 @@
+:host{
+
+  .card-list{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+
+    img{
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2{
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .card-button{
+      text-align: center;
+    }
+  }
+}

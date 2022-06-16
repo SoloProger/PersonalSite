@@ -1,0 +1,10 @@
+<section class="card-list">
+  <div class="card" *ngFor="let config of config">
+    <img src="{{config.imgUrl}}" alt="" *ngIf="config.imgUrl">
+    <h2>{{config.title}}</h2>
+    <p>{{config.description}}</p>
+    <div class="card-button">
+      <button  pButton class="p-button p-button-danger" label="{{config.buttonLabel}}" *ngIf="config.buttonLabel"></button>
+    </div>
+  </div>
+</section>

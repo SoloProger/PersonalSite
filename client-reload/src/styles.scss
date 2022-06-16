@@ -1,9 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto Mono", monospace;
   font-size: 16px;
   color: #21243d;
   background-color: #fff;
+}
+
+sup {
+  background-color: chartreuse;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
 }

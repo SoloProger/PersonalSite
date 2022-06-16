@@ -6,6 +6,8 @@ import {RouterModule} from "@angular/router";
 import {ButtonModule} from "primeng/button";
 import { LatestPostComponent } from './components/latest-post/latest-post.component';
 import { NewsComponent } from './components/news/news.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import {FooterModule} from "../../components/footer/footer.module";
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { NewsComponent } from './components/news/news.component';
     MainPageComponent,
     AboutPersonComponent,
     LatestPostComponent,
-    NewsComponent
+    NewsComponent,
+    ContactsComponent
   ],
   imports: [
     CommonModule,
@@ -21,7 +24,8 @@ import { NewsComponent } from './components/news/news.component';
       path: '',
       component: MainPageComponent
     }]),
-    ButtonModule
+    ButtonModule,
+    FooterModule
   ]
 })
 export class MainPageModule {

@@ -1,7 +1,13 @@
 :host {
-  main {
+  .header {
     display: flex;
     gap: 1rem;
     align-items: center;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }

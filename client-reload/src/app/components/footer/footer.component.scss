@@ -1,0 +1,39 @@
+:host {
+  .footer-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    // TODO remove
+    margin-bottom: 20px;
+  }
+
+  .footer-text {
+    display: flex;
+    font-size: 20px;
+    gap: 2rem;
+
+    &::after {
+      content: "";
+      background: #000;
+      border: 1px solid #000;
+    }
+  }
+
+  .about-site {
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+    gap: 2rem;
+
+    &::after {
+      content: "";
+      background: #000;
+      border: 1px solid #000;
+    }
+  }
+
+  .copy {
+    font-size: 20px;
+  }
+
+}

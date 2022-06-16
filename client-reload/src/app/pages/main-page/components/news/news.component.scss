@@ -1,7 +1,10 @@
 :host {
   .news-wrapper {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    gap: 1rem;
+    width: 80%;
     color: #21243d;
     transition: 2s;
 
