@@ -1,4 +1,4 @@
-import generate from "./generator";
+import generate from "./generatorUnikKeys";
 import site from "../images/mysite.png";
 import brick from "../images/brickproject.png";
 import sitev3 from "../images/personsitev3.png";

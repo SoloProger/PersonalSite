@@ -13,10 +13,10 @@ export default function Navbar() {
 
   const { isAuth, setIsAuth } = useContext(AuthContext);
 
-  const logout = () => {
+  function logout(): void {
     setIsAuth(false);
     localStorage.removeItem("auth");
-  };
+  }
 
   return (
     <nav>

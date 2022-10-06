@@ -1,4 +1,4 @@
-import generate from "../../utils/generator";
+import generate from "../../utils/generatorUnikKeys";
 import { ADD_NEWS, REMOVE_NEWS, ALL_NEWS } from "../types/newsTypes";
 
 const defaultState = {

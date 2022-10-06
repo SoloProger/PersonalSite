@@ -1,7 +1,8 @@
 import React from "react";
+import { ModalProps } from "../../../types/ui/modal/modal";
 import classes from "./Modal.module.css";
 
-export default function Modal({ children, visible, setVisible }) {
+export default function Modal({ children, visible, setVisible }: ModalProps) {
   const rootClasses = [classes.modal];
 
   if (visible) {

@@ -1,6 +1,7 @@
-import generate from "./generator";
+import { Link } from "../types/utils/link";
+import generate from "./generatorUnikKeys";
 
-export const privateLinks = [
+export const privateLinks: Link[] = [
   {
     name: "Главная",
     path: "/",
@@ -23,7 +24,7 @@ export const privateLinks = [
   }
 ];
 
-export const publicLinks = [
+export const publicLinks: Link[] = [
   {
     name: "Главная",
     path: "/",

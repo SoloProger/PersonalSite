@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Input from "../UI/input/Input";
 import Button from "../UI/button/Button";
-import generate from "../../utils/generator";
+import generate from "../../utils/generatorUnikKeys";
 
 const TodoForm = ({ create }) => {
   const [title, setTitle] = useState("");

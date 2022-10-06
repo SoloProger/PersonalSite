@@ -1,4 +1,4 @@
-import generate from "../../utils/generator";
+import generate from "../../utils/generatorUnikKeys";
 import { ADD_TODO, ALL_TODO, REMOVE_TODO } from "../types/todoTypes";
 
 const initialState = {
