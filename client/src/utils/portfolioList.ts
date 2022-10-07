@@ -7,8 +7,9 @@ import build from "../images/buildingsite.png";
 import mar from "../images/marriana.png";
 import obektuv from "../images/obektuv.png";
 import mamba from "../images/mamba.png";
+import { Portfolio } from "../types/utils/portfolio";
 
-export const portfolioList = [
+export const portfolioList: Portfolio[] = [
   {
     key: generate(),
     link: "http://flagman-kirpich.ru/",

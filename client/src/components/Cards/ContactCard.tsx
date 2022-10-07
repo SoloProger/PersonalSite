@@ -1,8 +1,15 @@
 import React from "react";
 import Button from "../UI/button/Button";
 import PropTypes from "prop-types";
+import { Contact } from "../../types/lists/contact";
 
-export default function ContactCard({ icon, title, body, link, button }) {
+export default function ContactCard({
+  icon,
+  title,
+  body,
+  link,
+  buttonName
+}: Contact) {
   return (
     <div className="contact__card">
       <div className="card__header">
@@ -18,18 +25,10 @@ export default function ContactCard({ icon, title, body, link, button }) {
             target="_blank"
             rel="noreferrer"
           >
-            {button}
+            {buttonName}
           </a>
         </Button>
       </div>
     </div>
   );
 }
-
-ContactCard.propTypes = {
-  icon: PropTypes.string,
-  title: PropTypes.string,
-  body: PropTypes.string,
-  link: PropTypes.string,
-  button: PropTypes.string,
-};

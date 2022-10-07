@@ -12,10 +12,11 @@ export default function App() {
       setIsAuth(true);
     }
   }, []);
+
   return (
     <AuthContext.Provider
       value={{
-        isAuth,
+        isAuth: false,
         setIsAuth
       }}
     >

@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Author from "../../images/author.jpg";
 import getAge from "../../utils/getMyAge";

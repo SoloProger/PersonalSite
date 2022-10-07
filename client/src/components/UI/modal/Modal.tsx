@@ -1,4 +1,3 @@
-import React from "react";
 import { ModalProps } from "../../../types/ui/modal/modal";
 import classes from "./Modal.module.css";
 

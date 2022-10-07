@@ -1,8 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
 import ContactCard from "../Cards/ContactCard";
+import { Contacts } from "../../types/lists/contact";
 
-const ContactList = ({ contacts }) => {
+const ContactList = ({ contacts }: Contacts) => {
   return (
     <div className="card__wrapper">
       {contacts.map((contact) => (
@@ -11,16 +10,12 @@ const ContactList = ({ contacts }) => {
           icon={contact.icon}
           title={contact.title}
           body={contact.body}
-          button={contact.button}
+          buttonName={contact.buttonName}
           link={contact.link}
         />
       ))}
     </div>
   );
-};
-
-ContactList.propTypes = {
-  contacts: PropTypes.array
 };
 
 export default ContactList;

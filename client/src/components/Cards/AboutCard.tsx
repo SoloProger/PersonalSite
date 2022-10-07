@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import Button from "../UI/button/Button";
+import { AboutCardProps } from "../../types/cards/about-card";
 
 const AboutCard = ({
   title,
@@ -8,9 +8,8 @@ const AboutCard = ({
   buttonLink,
   buttonTitle,
   isButton
-}) => {
-  // Если у компонента есть кнопка, то true, если нет то false
-  const [button, setButton] = useState(isButton);
+}: AboutCardProps) => {
+  const [button] = useState(isButton);
 
   return (
     <div className="about-card-wrapper">
@@ -34,14 +33,6 @@ const AboutCard = ({
       </div>
     </div>
   );
-};
-
-AboutCard.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  buttonLink: PropTypes.string,
-  buttonTitle: PropTypes.string,
-  isButton: PropTypes.bool
 };
 
 export default AboutCard;

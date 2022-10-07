@@ -1,4 +1,3 @@
-import React from "react";
 import Form from "../components/Forms/Form";
 import AboutCard from "../components/Cards/AboutCard";
 import { aboutCardList } from "../utils/aboutCardList";

@@ -1,5 +1,3 @@
-import React from "react";
-//Стили
 import { portfolioList } from "../utils/portfolioList";
 import PortfolioCard from "../components/Cards/PortfolioCard";
 

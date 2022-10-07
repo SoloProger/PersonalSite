@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../UI/button/Button";
 import Input from "../UI/input/Input";
-import Logo from "../../images/logo.png"
+import Logo from "../../images/logo.png";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -23,7 +23,7 @@ const Form = () => {
     }
   }, [nameError, phoneError]);
 
-  const nameHandler = (event) => {
+  const nameHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
     // const re =
     //   /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
@@ -33,7 +33,7 @@ const Form = () => {
       setNameError("");
     }
   };
-  const phoneHandler = (event) => {
+  const phoneHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhone(event.target.value);
     // const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
     if (!event.target.value) {
@@ -43,7 +43,7 @@ const Form = () => {
     }
   };
 
-  const blurHandler = (event) => {
+  const blurHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     // eslint-disable-next-line default-case
     switch (event.target.name) {
       case "name":
@@ -77,8 +77,12 @@ const Form = () => {
                 type="text"
                 placeholder="Ваше имя"
                 value={name}
-                onBlur={(event) => blurHandler(event)}
-                onChange={(event) => nameHandler(event)}
+                onBlur={(event: React.ChangeEvent<HTMLInputElement>) =>
+                  blurHandler(event)
+                }
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                  nameHandler(event)
+                }
               />
             </div>
 
@@ -91,8 +95,12 @@ const Form = () => {
                 placeholder="Ваш телефон"
                 type="text"
                 value={phone}
-                onBlur={(event) => blurHandler(event)}
-                onChange={(event) => phoneHandler(event)}
+                onBlur={(event: React.ChangeEvent<HTMLInputElement>) =>
+                  blurHandler(event)
+                }
+                onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+                  phoneHandler(event)
+                }
               />
             </div>
 

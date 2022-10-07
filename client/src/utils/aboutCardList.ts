@@ -1,6 +1,7 @@
 import getAge from "./getMyAge";
+import { AboutCardProps } from "../types/cards/about-card";
 
-export const aboutCardList = [
+export const aboutCardList: AboutCardProps[]  = [
   {
     title: "Обо мне",
     description: `Меня зовут Андрей, мне ${getAge()} лет. Я программирую с лета 2019

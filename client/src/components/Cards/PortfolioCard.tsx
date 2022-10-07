@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "../UI/button/Button";
-import PropTypes from "prop-types";
+import { Portfolio } from "../../types/utils/portfolio";
 
-const PortfolioCard = ({ img, title, description, link, isButton }) => {
+const PortfolioCard = ({ img, title, description, link, isButton }: Portfolio) => {
   return (
     <div className="portfolio-card-wrapper">
       <img src={img} alt="Изображение" />
@@ -28,12 +28,5 @@ const PortfolioCard = ({ img, title, description, link, isButton }) => {
   );
 };
 
-PortfolioCard.propTypes = {
-  img: PropTypes.any,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  link: PropTypes.string,
-  isButton: PropTypes.bool
-};
 
 export default PortfolioCard;
