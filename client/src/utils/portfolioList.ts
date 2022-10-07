@@ -39,15 +39,6 @@ export const portfolioList: Portfolio[] = [
   },
   {
     key: generate(),
-    link: "http://flagman-kirpich.ru/",
-    img: brick,
-    title: "Флагман Кирпич",
-    isButton: true,
-    description:
-      "Первый крупный рабочий проект. Сделан на react+hooks - клиент, Python/Djnago - сервер. Я избавился от css фреймворков и верстал всё ручками, поэтому получилось лучше чем мои проекты. Проект получился большим и сложном, он до сих пор развивается."
-  },
-  {
-    key: generate(),
     link: "https://mambaroll.ru/",
     img: mamba,
     title: "Черная мамба",

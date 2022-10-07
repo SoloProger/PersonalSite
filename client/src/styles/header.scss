@@ -1,16 +1,12 @@
 .header-wrapper {
-  width: 70%;
-  margin: 45px auto;
-  padding: 40px;
+  display: flex;
+  padding: 2.5rem;
+  align-items: center;
+  justify-content: center;
   border: 4px solid #fff;
-  border-radius: 5px;
   background-color: #fff;
   color: #000000;
   transition: 2s;
-
-  &:hover {
-    box-shadow: 5px -5px 10px #ff6464, -10px 10px 10px #ff6464;
-  }
 }
 
 .header-text {
@@ -71,6 +67,7 @@
 }
 
 @media (max-width: 900px) {
+
   .header-wrapper {
     display: flex;
     flex-direction: column;

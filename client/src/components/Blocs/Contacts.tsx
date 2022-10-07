@@ -1,4 +1,3 @@
-import React from "react";
 import { contacts } from "../../utils/contactList";
 import ContactList from "../Lists/ContactList";
 

@@ -22,7 +22,6 @@ export default function Navbar() {
     <nav>
       {isAuth ? (
         <div className={classes.nav__wrapper}>
-          <div className={classes.nav__logo}></div>
           <ul className={classes.nav__list}>
             {privateLinks.map((link) => (
               <li className={classes.nav__item} key={link.uniq}>
@@ -31,16 +30,11 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className={classes.nav__item}>
-              <Button className={classes.nav__item__link} onClick={logout}>
-                Выйти
-              </Button>
-            </li>
+            <li className={classes.nav__item}></li>
           </ul>
         </div>
       ) : (
         <div className={classes.nav__wrapper}>
-          <div className={classes.nav__logo}></div>
           <ul className={classes.nav__list}>
             {publicLinks.map((link) => (
               <li className={classes.nav__item} key={link.uniq}>
@@ -50,12 +44,6 @@ export default function Navbar() {
               </li>
             ))}
             <li className={classes.nav__item}>
-              <Button
-                onClick={() => setModal(true)}
-                className={classes.nav__item__link}
-              >
-                Войти
-              </Button>
               <Modal visible={modal} setVisible={setModal}>
                 <AuthForm />
               </Modal>

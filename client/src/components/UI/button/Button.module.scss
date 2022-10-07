@@ -32,3 +32,9 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 700px) {
+  .button {
+    font-size: 10px;
+  }
+}
