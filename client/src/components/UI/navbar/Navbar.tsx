@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context";
-import Button from "../button/Button";
 import Modal from "../modal/Modal";
 import AuthForm from "../../Forms/AuthForm";
 import classes from "./Navbar.module.scss";
