@@ -4,7 +4,7 @@
 @import "header.scss";
 @import "content.scss";
 @import "contact.scss";
-@import "latestpost.scss";
+@import "latest-post.scss";
 @import "news.scss";
 @import "form.scss";
 @import "footer.scss";
@@ -31,6 +31,7 @@ body {
   line-height: 1.5;
   color: #21243d;
   background-color: $color;
+  cursor: default;
 }
 
 sup {
@@ -42,7 +43,7 @@ sup {
 
 .button-link {
   text-decoration: none;
-  color: #ff6464;
+  color: inherit;
   transition: all 0.3s linear;
 
   &:hover {

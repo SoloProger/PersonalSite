@@ -5,39 +5,44 @@ export const privateLinks: Link[] = [
   {
     name: "Главная",
     path: "/",
-    uniq: generate()
+    uniq: generate(),
   },
   {
     name: "Обо_мне",
     path: "/about",
-    uniq: generate()
+    uniq: generate(),
   },
   {
     name: "Портфолио",
     path: "/portfolio",
-    uniq: generate()
+    uniq: generate(),
   },
   {
     name: "Todo",
     path: "/todo",
-    uniq: generate()
-  }
+    uniq: generate(),
+  },
 ];
 
 export const publicLinks: Link[] = [
   {
     name: "Главная",
     path: "/",
-    uniq: generate()
+    uniq: generate(),
   },
   {
     name: "Обо_мне",
     path: "/about",
-    uniq: generate()
+    uniq: generate(),
   },
   {
     name: "Портфолио",
     path: "/portfolio",
-    uniq: generate()
-  }
+    uniq: generate(),
+  },
+  {
+    name: "Блог",
+    path: "/blog",
+    uniq: generate(),
+  },
 ];

@@ -19,8 +19,8 @@ export default function Header() {
           <p>
             Меня зовут Андрей, мне {getAge()} лет. Я разработчик на языках
             JavaScript/TypeScript. Разрабатывл CRM/ERP системы, e-commerce и
-            личные кабинеты. Работал с такими технологиями, как Node.js,
-            React.js, Vue.js, MySQL, MongoDB, Express, Nest.js.
+            личные кабинеты. Работал с такими технологиями, как  Angular,
+            React.js, Vue.js, Node.js, Express, Nest.js.
           </p>
           <div className="header-footer">
             <Button>
