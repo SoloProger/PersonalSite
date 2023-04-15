@@ -5,7 +5,7 @@ https://personal-site-orcin-ten.vercel.app/
 
 ## Рабочий стэк
 + React.js
-+ Redux
++ ~~Redux~~
 + ~~Node.js(Express)~~
 + ~~MongoDB(Облачная)~~
 + ~~Python/Django~~
@@ -13,11 +13,11 @@ https://personal-site-orcin-ten.vercel.app/
 + ~~PHP/Laravel~~
 + ~~MySQL~~
 + ~~Sleepingowl Admin~~
-+ Node.js
++ ~~Node.js~~
 + ~~Express~~
 + ~~MongoDB~~
-+ Nest.js
-+ MySQL
++ ~~Nest.js~~
++ ~~MySQL~~
 
 ### Изменения проекта можно отследить по веткам
 ## Последние изменения (14.12.21)
