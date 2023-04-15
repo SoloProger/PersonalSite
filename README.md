@@ -1,7 +1,7 @@
 # PersonalSite
-Последняя вариация моего сайта. React.js + Node.js
+Последняя вариация моего сайта. React.js
 
-http://sololink.site
+https://personal-site-orcin-ten.vercel.app/
 
 ## Рабочий стэк
 + React.js
@@ -55,3 +55,7 @@ http://sololink.site
 ## Update 13.04.22
 ### Изменение стека
 В связи с возросшей сложностью приложения, я поменял стек сервера на Nest.js
+
+## Update 07.10.22
+### Деплой
+Задеплоил сайт на Vercel
