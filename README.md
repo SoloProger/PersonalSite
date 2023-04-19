@@ -4,7 +4,7 @@
 https://personal-site-orcin-ten.vercel.app/
 
 ## Рабочий стэк
-+ React.js
++ ~~React.js~~
 + ~~Redux~~
 + ~~Node.js(Express)~~
 + ~~MongoDB(Облачная)~~
@@ -59,3 +59,7 @@ https://personal-site-orcin-ten.vercel.app/
 ## Update 07.10.22
 ### Деплой
 Задеплоил сайт на Vercel
+
+## Update 19.04.23
+### Снес фреймворк
+Переписал сайт на HTML, CSS, JS. 
