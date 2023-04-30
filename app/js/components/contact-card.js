@@ -1,4 +1,4 @@
-export default function createContactCard(contact) {
+export default function createContactCard(contact, callback) {
   return `
       <div class="contact__card">
         <div class="card__header">
@@ -7,14 +7,7 @@ export default function createContactCard(contact) {
         </div>
         <div class="card__body">${contact.body}</div>
         <div class="card__footer">
-            <a
-              href="${contact.link}"
-              class="button button__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ${contact.buttonName}
-            </a>
+            ${callback(contact.buttonName, contact.link)}
         </div>
       </div>
       `;

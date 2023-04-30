@@ -38,18 +38,21 @@ export const portfolioCards = [
     link: "#",
     img: "../assets/img/mysite.png",
     title: "Сайт без фреймворков",
+    isButton: true,
     description: "",
   },
   {
     link: "#",
     img: "../assets/img/personsitev3.png",
     title: "Сайт. Версия 3",
+    isButton: true,
     description: "",
   },
   {
     link: "#",
     img: "../assets/img/personsitev2.png",
     title: "Сайт. Версия 2",
+    isButton: true,
     description: "",
   },
 ];
