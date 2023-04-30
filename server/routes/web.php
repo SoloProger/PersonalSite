@@ -14,3 +14,5 @@
 */
 
 $router->get('/links',  'NavigationLinkController@getLinks');
+$router->get('/portfolio', 'PortfolioController@getProjects');
+$router->post('/portfolio', 'PortfolioController@addProject');
