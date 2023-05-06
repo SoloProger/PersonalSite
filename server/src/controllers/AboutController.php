@@ -1,5 +1,7 @@
 <?php
 
+
+
 namespace App\Controllers;
 
 use App\Core\Abstraction\Controller;
@@ -48,6 +50,8 @@ class AboutController extends Controller
 
     public function get(): void
     {
+
+        
 
         $query = "SELECT * FROM about_cards;";
         $links = $this->connection->query($query);

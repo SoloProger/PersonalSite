@@ -1,11 +1,25 @@
-import { contacts } from "../utils/contacts.js";
-import createContactCard from "../components/contact-card.js";
+import { contactsApi } from "../api/index.js";
+import {
+  createContactCard,
+  renderButton,
+  loader,
+} from "../components/index.js";
 import stringToHtml from "../utils/string-to-html.js";
-import renderButton from "../components/button.js";
 
 const cardWrapper = document.querySelector(".card__wrapper");
 
-contacts.forEach((contact) => {
-  const card = createContactCard(contact, renderButton);
-  cardWrapper.appendChild(stringToHtml(card, "div"));
-});
+const contactsModule = async () => {
+  try {
+    const response = await contactsApi();
+    const { data } = await response.json();
+
+    data.forEach((contact) => {
+      const card = createContactCard(contact, renderButton);
+      cardWrapper.appendChild(stringToHtml(card, "div"));
+    });
+  } catch (error) {
+    cardWrapper?.appendChild(stringToHtml(loader(), "span"));
+  }
+};
+
+export default contactsModule;

@@ -1,15 +1,12 @@
-import createModal from "../components/modal-ui.js";
+import { createModal, footerModalContent } from "../components/index.js";
 import stringToHtml from "../utils/string-to-html.js";
-import footerModalContent from "../components/footer-modal-content.js";
 
 const modalPortal = document.querySelector("#modalPortal");
 const modalTrigger = document.querySelector(".about-site");
 
 const modal = createModal(footerModalContent());
 
-modalPortal.appendChild(stringToHtml(modal, "div"));
-
-modalLogic();
+modalPortal?.appendChild(stringToHtml(modal, "div"));
 
 function modalLogic() {
   const modalEl = document.querySelector("#modal");
@@ -25,3 +22,5 @@ function closeModal(event, modalEl) {
   if (!modalEl) return;
   event.target == modalEl && modalEl.classList.remove("active");
 }
+
+export default modalLogic;

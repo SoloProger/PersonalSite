@@ -1,11 +1,25 @@
-import { portfolioCards } from "../utils/portfolio-cards.js";
-import createPortfolioCard from "../components/portfolio-card.js";
+import { portfolioApi } from "../api/index.js";
+import {
+  createPortfolioCard,
+  loader,
+  renderButton,
+} from "../components/index.js";
 import stringToHtml from "../utils/string-to-html.js";
-import renderButton from "../components/button.js";
 
-const portfolio = document.querySelector(".portfolio");
+const portfolioList = document.querySelector(".portfolio");
 
-portfolioCards.forEach((link) => {
-  const portfolioCard = createPortfolioCard(link, renderButton);
-  portfolio.appendChild(stringToHtml(portfolioCard, "div"));
-});
+const portfolio = async () => {
+  try {
+    const response = await portfolioApi();
+    const { data } = await response.json();
+
+    data.forEach((project) => {
+      const portfolioCard = createPortfolioCard(project, renderButton);
+      portfolioList.appendChild(stringToHtml(portfolioCard, "div"));
+    });
+  } catch (error) {
+    portfolioList?.appendChild(stringToHtml(loader(), "span"));
+  }
+};
+
+export default portfolio;
