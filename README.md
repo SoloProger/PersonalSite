@@ -1,5 +1,5 @@
 # PersonalSite
-Последняя вариация моего сайта. React.js
+Последняя вариация моего сайта.
 
 https://personal-site-orcin-ten.vercel.app/
 
