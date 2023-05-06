@@ -16,6 +16,7 @@ class Router
 
     public function resolve(string $path): void
     {
+
         $id = Request::getId();
         switch (Request::getMethod()) {
             case 'GET':

@@ -30,7 +30,6 @@ class Connection
         try {
             $this->connection = new PDO($this->configDb(), $this->username, $this->password);
             $this->connection->exec("set names utf8");
-            echo "Connection success";
         } catch (PDOException $exception) {
             echo "Connection error:" . $exception->getMessage();
         }

@@ -2,16 +2,18 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use App\Core\Abstraction\Model;
+use App\Controllers\AboutController;
+use App\Controllers\ContactController;
+use App\Controllers\NavigationListController;
+use App\Controllers\PortfolioController;
 use App\Core\Database\Connection;
-use App\Core\Database\Table;
+use App\Core\Routing\Router;
 use App\Helpers\DotEnv;
 
 
 function __init__()
 {
     DotEnv::load(__DIR__);
-    $model = new Model();
 
     $connect = new Connection([
         "HOST" => getenv("HOST"),
@@ -20,9 +22,16 @@ function __init__()
         "PASSWORD" => getenv("PASSWORD"),
         "PORT" => getenv("PORT")
     ]);
-    
-    $table = new Table($connect->getConnection(), $model);
-    $table->create();
+
+    $navigationRouter = new Router(new NavigationListController($connect->getConnection()));
+    $contactRouter = new Router(new ContactController($connect->getConnection()));
+    $aboutRouter = new Router(new AboutController($connect->getConnection()));
+    $portfolioRouter = new Router(new PortfolioController($connect->getConnection()));
+
+    $navigationRouter->resolve('links');
+    $contactRouter->resolve('contacts');
+    $aboutRouter->resolve('about');
+    $portfolioRouter->resolve('portfolio');
 }
 
 __init__();

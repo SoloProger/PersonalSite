@@ -6,7 +6,7 @@ use App\Core\Abstraction\Controller;
 use Exception;
 use PDO;
 
-class ContactController extends Controller
+class NavigationListController extends Controller
 {
 
     private readonly PDO $connection;
@@ -14,30 +14,27 @@ class ContactController extends Controller
     public function __construct(PDO $connection)
     {
         $this->connection = $connection;
-        $this->createTableContacts();
+        $this->createTableNavigation();
     }
 
 
     private function tableExist()
     {
         try {
-            $result = $this->connection->query("DESCRIBE contacts");
+            $result = $this->connection->query("DESCRIBE navigation");
         } catch (Exception $ex) {
             return FALSE;
         }
         return $result !== FALSE;
     }
 
-    public function createTableContacts()
+    public function createTableNavigation()
     {
         $query = "
-            CREATE TABLE contacts (
+            CREATE TABLE navigation (
                 id int auto_increment primary key, 
-                icon varchar(255) not null,
-                title varchar(30) not null,
-                body text,
-                button_name varchar(30) not null DEFAULT 'Посмотреть',
-                link varchar(50) not null
+                path varchar(20) not null,
+                name varchar(30) not null
             );
         ";
 
@@ -49,20 +46,17 @@ class ContactController extends Controller
     public function get(): void
     {
 
-        $query = "SELECT * FROM contacts;";
-        $contacts = $this->connection->query($query);
+        $query = "SELECT * FROM navigation;";
+        $links = $this->connection->query($query);
 
         $result = [];
-        while ($row = $contacts->fetch(PDO::FETCH_ASSOC)) {
-            $contact = [
+        while ($row = $links->fetch(PDO::FETCH_ASSOC)) {
+            $link = [
                 "id" => $row["id"],
-                "icon" => $row["icon"],
-                "title" => $row["title"],
-                "body" => $row["body"],
-                "buttonName" => $row["button_name"],
-                "link" => $row["link"],
+                "path" => $row["path"],
+                "name" => $row["name"],
             ];
-            array_push($result, $contact);
+            array_push($result, $link);
         }
         echo json_encode(["status" => "success", "data" => $result]);
     }
@@ -83,4 +77,5 @@ class ContactController extends Controller
     {
 
     }
+
 }
