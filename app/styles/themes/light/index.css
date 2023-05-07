@@ -39,10 +39,6 @@ sup {
   transition: all 0.3s linear;
 }
 
-.button-link:hover {
-  color: #fff;
-}
-
 .error {
   color: rgb(145, 18, 18);
   padding: 10px auto;

@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+@import "navbar-dark.css";
+@import "header-dark.css";
+@import "contacts-dark.css";
+@import "footer-dark.css";
+@import "../light/ui/button.css";
+@import "../light/ui/loader.css";
+@import "pages/index.css";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+  cursor: default;
+}
+
+sup {
+  background-color: chartreuse;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.button-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s linear;
+}
+
+.error {
+  color: rgb(145, 18, 18);
+  padding: 10px auto;
+  text-align: center;
+}
+
+.modal__about {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__about__body {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+@media (max-width: 700px) {
+  .image {
+    width: 80%;
+  }
+  .form__img {
+    text-align: center;
+  }
+
+  .image {
+    width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form__img {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .image {
+    width: 250px;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  padding: 25px;
+  background: #000;
+  border-radius: 16px;
+  border: 1px solid #fff;
+  min-width: 250px;
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
