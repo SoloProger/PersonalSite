@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile
         container_name: app
         volumes:
-        - ./:/usr/share/nginx/html
+        - ./:/usr/share/nginx/html/personal_site
         ports:
         - "3000:3000"
         tty: true

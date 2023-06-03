@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html/personal_site
 
 COPY . .
 
