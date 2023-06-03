@@ -12,7 +12,7 @@ export default function footerModalContent() {
               <strong>Frontend: </strong> 
               <span>HTML, CSS, Vanilla JavaScript</span> <br />
               <strong>Backend: </strong>
-              <span>PHP(Lumen), MySQL</span>
+              <span>PHP, MySQL</span>
           </div>
       </div>
       
