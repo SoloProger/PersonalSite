@@ -11,7 +11,7 @@ const cardWrapper = document.querySelector(".card__wrapper");
 const contactsModule = async () => {
   try {
     const response = await contactsApi();
-    const { data } = await response.json();
+    const data = await response.json();
 
     data.forEach((contact) => {
       const card = createContactCard(contact, renderButton);

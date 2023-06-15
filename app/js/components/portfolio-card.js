@@ -4,7 +4,7 @@ export default function createPortfolioCard(info, callback) {
             <img src="../assets/img/${info.img}" alt="Изображение" />
             <div class="portfolio-card-content">
                 <h3>${info.title}</h3>
-                <p>${info.description}</p>
+                <p>${info.description ?? ''}</p>
                 ${info.isButton ? callback('Подробнее', info.link) : ''}
             </div>
         </div>

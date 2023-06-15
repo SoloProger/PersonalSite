@@ -1,3 +1,5 @@
+import { baseApiUrl } from '../config/api.js';
+
 export default async function contactsApi() {
-  return await fetch("http://localhost:8000/contacts");
+  return await fetch(`${baseApiUrl}/contacts`);
 }

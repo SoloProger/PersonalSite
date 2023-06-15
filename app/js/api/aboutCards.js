@@ -1,3 +1,5 @@
+import { baseApiUrl } from '../config/api.js';
+
 export default async function aboutCardsApi() {
-  return await fetch("http://localhost:8000/about");
+  return await fetch(`${baseApiUrl}/about`);
 }
