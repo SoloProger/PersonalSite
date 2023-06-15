@@ -1,3 +1,5 @@
+import { baseApiUrl } from '../config/api.js';
+
 export default async function navigationLinkApi() {
-  return await fetch("http://localhost:8000/links");
+  return await fetch(`${baseApiUrl}/links`);
 }

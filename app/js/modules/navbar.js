@@ -7,7 +7,7 @@ const linkList = document.querySelector(".nav__list");
 const navbar = async () => {
   try {
     const response = await navigationLinkApi();
-    const { data } = await response.json();
+    const data  = await response.json();
     data.forEach((link) => {
       const navLink = createNavLink(link);
       linkList.appendChild(stringToHtml(navLink, "li"));

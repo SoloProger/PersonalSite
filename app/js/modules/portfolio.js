@@ -11,7 +11,7 @@ const portfolioList = document.querySelector(".portfolio");
 const portfolio = async () => {
   try {
     const response = await portfolioApi();
-    const { data } = await response.json();
+    const data  = await response.json();
 
     data.forEach((project) => {
       const portfolioCard = createPortfolioCard(project, renderButton);
