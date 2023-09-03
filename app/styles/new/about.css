@@ -1,0 +1,27 @@
+.about_container {
+  background: #f6f6f6;
+}
+
+.about {
+  padding: 10rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about_header {
+  font-family: Gilroy-Bold;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about_body {
+  display: flex;
+  width: 450px;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 2.5rem;
+}

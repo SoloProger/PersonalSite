@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 32px 0;
+}
+
+.navbar_menu {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.menu_item {
+  color: #828282;
+  font-family: Gilroy-Bold;
+  transition: 1s;
+}
+
+.menu_item:hover {
+  color: #070707;
+}
+
+.active {
+  color: #070707;
+}

@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.name {
+  width: 125px;
+  font-family: Gilroy-Bold;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 250px;
+}
+
+.translate {
+  color: #828282;
+  font-family: Gilroy-Bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transform: rotate(-0.25turn);
+}
+
+
