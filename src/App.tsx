@@ -1,11 +1,16 @@
-import MainLayout from './layouts/MainLayout.tsx';
 import { Outlet } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar.tsx';
+import Footer from './components/footer/Footer.tsx';
+import ContentForm from './components/contact-form/ContentForm.tsx';
 
 function App() {
   return (
-    <MainLayout>
+    <div className='App'>
+      <Navbar />
       <Outlet />
-    </MainLayout>
+      <ContentForm />
+      <Footer />
+    </div>
   );
 }
 
