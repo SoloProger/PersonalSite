@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Button from "./UI/button/Button";
-import Input from "./UI/input/Input";
+import Button from "../shared/ui/button/Button";
+import Input from "../shared/ui/input/Input.js";
 import Logo from "../images/logo.png"
 
 const Form = () => {

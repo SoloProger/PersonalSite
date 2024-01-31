@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../UI/button/Button";
+import Button from "../../shared/ui/button/Button";
 
 const Todo = (props) => {
 

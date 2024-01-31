@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/ToDoPage.css";
-import Button from "../components/UI/button/Button";
-import Modal from "../components/UI/modal/Modal";
+import Button from "../shared/ui/button/Button";
+import Modal from "../shared/ui/modal/Modal";
 import Form from "../components/ToDoPage/Form";
 import Todolist from "../components/ToDoPage/TodoList";
 import axios from "axios";

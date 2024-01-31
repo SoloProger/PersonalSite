@@ -1,10 +1,12 @@
-import React from "react";
+import MainLayout from './layouts/MainLayout.tsx';
+import { Outlet } from 'react-router-dom';
 
-export default function App() {
+function App() {
   return (
-    <div>
-      hello world
-      {/* <Mainlayout /> */}
-    </div>
+    <MainLayout>
+      <Outlet />
+    </MainLayout>
   );
 }
+
+export default App;

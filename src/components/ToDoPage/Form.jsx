@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Input from "../UI/input/Input";
-import Button from "../UI/button/Button";
+import Input from "../../shared/ui/input/Input.js";
+import Button from "../../shared/ui/button/Button";
 
 const Form = ({ create }) => {
   const [todo, setTodo] = useState({ title: "", body: "" });
