@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTodoAction, allTodoAction, removeTodoAction } from "../store/actions/todoAction";
-import Button from "../components/UI/button/Button";
-import Modal from "../components/UI/modal/Modal";
-import Form from "../components/Forms/Form";
+import Button from "../components/UI/button/Button.js";
+import Modal from "../components/UI/modal/Modal.js";
+import Form from "../components/Forms/Form.js";
 import TodoList from "../components/Lists/TodoList";
 import TodoForm from "../components/Forms/TodoForm";
 

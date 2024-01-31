@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Button from "../UI/button/Button";
+import Button from "../UI/button/Button.js";
 
 const TodoCard = ({ todo, title, description, remove, completed }) => {
   return (

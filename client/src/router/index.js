@@ -1,7 +1,7 @@
-import AboutPage from "../pages/AboutPage.jsx";
+import AboutPage from "../pages/AboutPage.tsx";
 import TodoPage from "../pages/TodoPage.jsx";
-import PortfolioPage from "../pages/PortfolioPage.jsx";
-import MainPage from "../pages/MainPage.jsx";
+import PortfolioPage from "../pages/PortfolioPage.tsx";
+import MainPage from "../pages/MainPage.tsx";
 
 export const privateRoutes = [
   { path: "/", component: MainPage, exact: true },

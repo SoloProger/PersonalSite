@@ -1,4 +1,4 @@
-import generate from "../../utils/generator";
+import generate from "../../utils/generator.js";
 import { ADD_TODO, ALL_TODO, REMOVE_TODO } from "../types/todoTypes";
 
 const defaultState = {

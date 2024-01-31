@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import Input from "../UI/input/Input";
-import Button from "../UI/button/Button";
+import Input from "../UI/input/Input.js";
+import Button from "../UI/button/Button.js";
 import { AuthContext } from "../../context";
 
 export default function AuthForm() {
