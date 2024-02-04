@@ -1,38 +1,39 @@
-import React, { useContext } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
-import { AuthContext } from "../context";
-import { privateRoutes, publicRoutes } from "../router";
+import React, { useContext } from 'react';
+import { Redirect, Route, Switch } from 'react-router-dom';
+import { AuthContext } from '../context';
+import { privateRoutes, publicRoutes } from '../router';
 
 export default function Routes() {
-  const { isAuth,  } = useContext(AuthContext);
+	const { isAuth } = useContext(AuthContext);
 
-  return isAuth ? (
-    <div>
-      <Switch>
-        {privateRoutes.map((route) => (
-          <Route
-            component={route.component}
-            path={route.path}
-            exact={route.exact}
-            key={route.path}
-          />
-        ))}
-      </Switch>
-    </div>
-  ) : (
-    <div>
-      <Switch>
-        {publicRoutes.map((route) => (
-          <Route
-            component={route.component}
-            path={route.path}
-            exact={route.exact}
-            key={route.path}
-          />
-        ))}
+	return isAuth ? (
+		<div>
+			<h2></h2>
+			<Switch>
+				{privateRoutes.map(route => (
+					<Route
+						component={route.component}
+						path={route.path}
+						exact={route.exact}
+						key={route.path}
+					/>
+				))}
+			</Switch>
+		</div>
+	) : (
+		<div>
+			<Switch>
+				{publicRoutes.map(route => (
+					<Route
+						component={route.component}
+						path={route.path}
+						exact={route.exact}
+						key={route.path}
+					/>
+				))}
 
-        <Redirect to="/" />
-      </Switch>
-    </div>
-  );
+				<Redirect to='/' />
+			</Switch>
+		</div>
+	);
 }
